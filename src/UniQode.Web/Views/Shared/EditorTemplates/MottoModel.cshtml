@@ -30,38 +30,27 @@
                 <div class="form-group">
                     @Html.HiddenFor(m => m.Id, new { Name = "Id" })
                     @Html.HiddenFor(m => m.State, new {Name = "State" })
-                    <div class="col-md-10" style="margin-bottom: 10px;">
+                    <div class="col-md-12" style="margin-bottom: 10px;">
                         @Html.LabelFor(m => m.Title)<br/>
                         @Html.TextBoxFor(m => m.Title, new {Name = "Title", @class = "form-control"})
                         @Html.ValidationMessageFor(m => m.Title)
                     </div>
-                    <div class="col-md-10">
+                    <div class="col-md-12">
                         @Html.LabelFor(m => m.Description)<br/>
-                        @Html.TextAreaFor(m => m.Description, new {Name = "Description", @class = "form-control", @rows = "7"})
+                        @Html.TextAreaFor(m => m.Description, new {Name = "Description", @class = "form-control", @rows = "7", @style="max-width: 100%"})
                         @Html.ValidationMessageFor(m => m.Description)
                     </div>
                 </div>
             </div>
-            <br/>
-            <div class="form-inline">
-                <div class="form-group">
-                    <input name="action" type="submit" value="Publish" class="btn btn-success" title="Saves your changes and publishes them to the site"/>
-                </div>
-                <div class="form-group">
-                    <input name="action" type="submit" value="Save" class="btn btn-warning" title="Saves your changes for previewing or working with later"/>
-                </div>
-                <div class="form-group">
-                    <input name="action" type="submit" value="Preview" class="btn btn-info" title="Saves your changes and shows them in a preview state"/>
-                </div>
+            <div>
+                <input name="action" type="submit" value="Publish" class="btn btn-success" title="Saves your changes and publishes them to the site" />
+                <input name="action" type="submit" value="Save" class="btn btn-warning" title="Saves your changes for previewing or working with later" />
+                <input name="action" type="submit" value="Preview" class="btn btn-info" title="Saves your changes and shows them in a preview state" />
                 @if (Model.State != State.Adding)
                 {
-                    <div class="form-group">
-                        <input name="action" type="submit" value="Delete" class="btn btn-danger" title="Deletes the motto altogether" onclick="return uniQode.confirmRemoval(event, 'motto');"/>
-                    </div>
+                    <input name="action" type="submit" value="Delete" class="btn btn-danger" title="Deletes the entry altogether" onclick="return uniQode.confirmRemoval(event, 'motto');" />
                 }
             </div>
-            <br/>
-            <br/>
         </div>
     </div>
 }

@@ -22,12 +22,12 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10" style="margin-bottom: 10px;">
                 @Html.LabelFor(m => m.Email)<br />
-                @Html.TextBoxFor(m => m.Email, new { @class = "form-control"})
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @style = "width: 250px;"})
                 @Html.ValidationMessageFor(m => m.Email)
             </div>
             <div class="col-md-offset-2 col-md-10" style="margin-bottom: 10px;">
                 @Html.LabelFor(m => m.Password)<br />
-                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", @style = "width: 250px;" })
                 @Html.ValidationMessageFor(m => m.Password)
             </div>
             <div class="col-md-offset-2 col-md-10">
