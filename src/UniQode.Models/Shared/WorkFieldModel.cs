@@ -11,11 +11,13 @@ namespace UniQode.Models.Shared
         [System.Web.Mvc.HiddenInput(DisplayValue = false)]
         public Guid Id { get; set; }
 
-        [Required(ErrorMessage = "A title is required"), MaxLength(32, ErrorMessage = "The title cannot be longer than 32 chars")]
+        [Required(ErrorMessage = "A title is required")]
+        [MaxLength(32, ErrorMessage = "The title cannot be longer than 32 chars")]
         [Display(Name = "Title")]
         public string Title { get; set; }
 
-        [Required(ErrorMessage = "A description is required"), MaxLength(256, ErrorMessage = "The description cannot be longer than 256 chars")]
+        [Required(ErrorMessage = "A description is required")]
+        [MaxLength(1024, ErrorMessage = "The description cannot be longer than 1024 chars")]
         [Display(Name = "Description")]
         public string Description { get; set; }
 

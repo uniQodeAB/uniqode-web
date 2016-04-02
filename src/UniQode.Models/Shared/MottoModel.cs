@@ -32,7 +32,7 @@ namespace UniQode.Models.Shared
         public string Title { get; set; }
 
         [Required(ErrorMessage = "A description is required")]
-        [MaxLength(256, ErrorMessage = "The description cannot be longer than 256 chars")]
+        [MaxLength(1024, ErrorMessage = "The description cannot be longer than 1024 chars")]
         [Display(Name = "Description")]
         public string Description { get; set; }
 

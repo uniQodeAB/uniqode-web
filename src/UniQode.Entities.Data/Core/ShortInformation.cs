@@ -7,7 +7,7 @@ namespace UniQode.Entities.Data.Core
         [Required, MaxLength(32)]
         public string Title { get; set; }
 
-        [Required, MaxLength(256)]
+        [Required, MaxLength(1024)]
         public string Description { get; set; }
     }
 }

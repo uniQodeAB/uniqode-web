@@ -9,7 +9,8 @@ namespace UniQode.Models.Shared
         [System.Web.Mvc.HiddenInput(DisplayValue = false)]
         public Guid Id { get; set; }
 
-        [Required(ErrorMessage = "A text is required"), MaxLength(256, ErrorMessage = "The text cannot be longer than 256 chars")]
+        [Required(ErrorMessage = "A text is required")] 
+        [MaxLength(512, ErrorMessage = "The text cannot be longer than 512 chars")]
         [Display(Name = "Text")]
         public string Text { get; set; }
 

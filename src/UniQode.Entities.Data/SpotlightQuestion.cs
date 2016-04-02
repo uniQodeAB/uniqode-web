@@ -7,7 +7,7 @@ namespace UniQode.Entities.Data
     [Table("SpotlightQuestions")]
     public class SpotlightQuestion : UniqueEntity
     {
-        [Required, MaxLength(256)]
+        [Required, MaxLength(512)]
         public string Text { get; set; }
     }
 }

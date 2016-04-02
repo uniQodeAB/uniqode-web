@@ -53,6 +53,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\PrimaryModel\201604022219491_LongerDescriptions.cs" />
+    <Compile Include="Migrations\PrimaryModel\201604022219491_LongerDescriptions.Designer.cs">
+      <DependentUpon>201604022219491_LongerDescriptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\SecondaryModel\201604022220334_LongerDescriptions.cs" />
+    <Compile Include="Migrations\SecondaryModel\201604022220334_LongerDescriptions.Designer.cs">
+      <DependentUpon>201604022220334_LongerDescriptions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repositories\AdminRepository.cs" />
     <Compile Include="Models\BaseDbContext.cs" />
     <Compile Include="Models\AdminModel.cs" />
@@ -104,8 +112,14 @@
     <EmbeddedResource Include="Migrations\PrimaryModel\201603121219209_Initial.resx">
       <DependentUpon>201603121219209_Initial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\PrimaryModel\201604022219491_LongerDescriptions.resx">
+      <DependentUpon>201604022219491_LongerDescriptions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\SecondaryModel\201603121226229_Initial.resx">
       <DependentUpon>201603121226229_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\SecondaryModel\201604022220334_LongerDescriptions.resx">
+      <DependentUpon>201604022220334_LongerDescriptions.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
