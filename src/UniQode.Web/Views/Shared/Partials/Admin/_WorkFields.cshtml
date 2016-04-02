@@ -1,18 +1,15 @@
 ﻿@model IEnumerable<UniQode.Models.Shared.WorkFieldModel>
 <div class="container">
-    <h2>What we do</h2>
+    <h2>
+        What we do <a class="btn btn-success" href="javascript:uniQode.adminAction('workfield', 'Adding')">Add</a>
+    </h2>
     <hr />
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info" role="alert">No mottos exists! Start by adding your first with the button above.</div>
+    }
     @foreach (var item in Model)
     {
-        <div class="col-md-offset-2 col-md-10" style="margin-bottom: 10px;">
-            @Html.Label(item.Title)<br />
-            @Html.TextBox(item.Title)
-            @Html.ValidationMessage(item.Title)
-        </div>
-        <div class="col-md-offset-2 col-md-10" style="margin-bottom: 10px;">
-            @Html.Label(item.Description)<br />
-            @Html.TextBox(item.Description)
-            @Html.ValidationMessage(item.Description)
-        </div>
+        @Html.EditorFor(m => item)
     }
 </div>

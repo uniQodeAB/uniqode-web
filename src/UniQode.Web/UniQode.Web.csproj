@@ -279,6 +279,7 @@
     <Content Include="Views\Shared\Partials\Admin\_WorkFields.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\MottoModel.cshtml" />
     <Content Include="Views\Shared\Partials\Admin\_SpotlightQuestions.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\WorkfieldModel.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

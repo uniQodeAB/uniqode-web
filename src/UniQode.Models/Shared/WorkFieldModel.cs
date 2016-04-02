@@ -21,11 +21,11 @@ namespace UniQode.Models.Shared
         [Display(Name = "Description")]
         public string Description { get; set; }
 
-        [Bindable(false)]
-        public AdminAction Action { get; set; }
+        [System.Web.Mvc.HiddenInput(DisplayValue = false)]
+        public State State { get; set; }
 
         [Bindable(false)]
-        public State State { get; set; }
+        public AdminAction Action { get; set; }
 
         public static WorkFieldModel FromDto(WorkField dto)
         {
