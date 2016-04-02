@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using UniQode.Entities.Data;
@@ -7,20 +6,7 @@ using UniQode.Entities.Enums;
 
 namespace UniQode.Models.Shared
 {
-    public class MottoModelList
-    {
-        public MottoModelList()
-        {
-            Items = new List<MottoModel>();
-        }
-        public MottoModelList(ICollection<MottoModel> items)
-        {
-            Items = items;
-        }
-        public ICollection<MottoModel> Items { get; set; }
-    }
-
-    public class MottoModel //: IValidatableObject
+    public class MottoModel
     {
         [System.Web.Mvc.HiddenInput(DisplayValue = false)]
         [Required]
@@ -61,22 +47,5 @@ namespace UniQode.Models.Shared
                 Description = this.Description
             };
         }
-
-        //public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        //{
-        //    var results = new List<ValidationResult>();
-
-        //    Validator.TryValidateProperty(this.Id,
-        //        new ValidationContext(this, null, null) { MemberName = "Id" },
-        //        results);
-        //    Validator.TryValidateProperty(this.Title,
-        //        new ValidationContext(this, null, null) { MemberName = "Title" },
-        //        results);
-        //    Validator.TryValidateProperty(this.Description,
-        //        new ValidationContext(this, null, null) { MemberName = "Description" },
-        //        results);
-
-        //    return results;
-        //}
     }
 }
