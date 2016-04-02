@@ -1,0 +1,20 @@
+﻿@model IEnumerable<UniQode.Models.Shared.MottoModel>
+<div class="container">
+    <h2>
+        The uniQode Mottos <a class="btn btn-success" href="javascript:uniQode.adminAction('motto', 'Adding')">Add</a>
+    </h2>
+    @using (Html.BeginForm("Act", "Motto", FormMethod.Post))
+    {
+        <div class="form-horizontal">
+        </div>
+    }
+    <hr/>
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info" role="alert">No mottos exists! Start by adding your first with the button above.</div>
+    }
+    @foreach (var motto in Model)
+    {
+        @Html.EditorFor(m => motto)
+    }
+</div>

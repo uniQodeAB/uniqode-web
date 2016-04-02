@@ -1,0 +1,11 @@
+﻿@model UniQode.Models.Admin.StartModel
+
+@{
+    ViewBag.Title = "Start";
+}
+
+@Html.Action("List", "Motto", new { state = Request["motto"]})
+
+@*@Html.Action("List", "Workfield", new { state = Request["workfield"] })
+
+@Html.Action("Questions", "Spotlight")*@

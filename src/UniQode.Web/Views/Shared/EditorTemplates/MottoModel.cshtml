@@ -1,0 +1,67 @@
+﻿@using UniQode.Entities.Enums
+@model UniQode.Models.Shared.MottoModel
+
+@using (Html.BeginForm("Act", "Motto", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="panel @if (Model.State == State.Adding)
+                                    {<text>panel-success</text>} else {<text>panel-default</text>} ">
+        <div class="panel-heading">
+            <h4>
+                Motto @if (Model.State == State.Adding)
+                      {
+                          <span class="label label-success pull-right">NEW</span>
+                      }
+            </h4>
+        </div>
+        <div class="panel-body">
+            @if (Model.State == State.Adding)
+            {
+                <div class="alert alert-info" role="alert">This is a new entry and will be lost if you you don´t save your changes!</div>
+            }
+            @if (Model.State != State.None && ViewData.ModelState.Keys.Any(k => ViewData.ModelState[k].Errors.Any()))
+            {
+                <div class="alert alert-danger">
+                    <button class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    @Html.ValidationSummary(false, "Errors: ")
+                </div>
+            }
+            <div class="form-horizontal">
+                <div class="form-group">
+                    @Html.HiddenFor(m => m.Id, new { Name = "Id" })
+                    @Html.HiddenFor(m => m.State, new {Name = "State" })
+                    <div class="col-md-10" style="margin-bottom: 10px;">
+                        @Html.LabelFor(m => m.Title)<br/>
+                        @Html.TextBoxFor(m => m.Title, new {Name = "Title", @class = "form-control"})
+                        @Html.ValidationMessageFor(m => m.Title)
+                    </div>
+                    <div class="col-md-10">
+                        @Html.LabelFor(m => m.Description)<br/>
+                        @Html.TextAreaFor(m => m.Description, new {Name = "Description", @class = "form-control"})
+                        @Html.ValidationMessageFor(m => m.Description)
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <div class="form-inline">
+                <div class="form-group">
+                    <input name="action" type="submit" value="Publish" class="btn btn-success" title="Saves your changes and publishes them to the site"/>
+                </div>
+                <div class="form-group">
+                    <input name="action" type="submit" value="Save" class="btn btn-warning" title="Saves your changes for previewing or working with later"/>
+                </div>
+                <div class="form-group">
+                    <input name="action" type="submit" value="Preview" class="btn btn-info" title="Saves your changes and shows them in a preview state"/>
+                </div>
+                @if (Model.State != State.Adding)
+                {
+                    <div class="form-group">
+                        <input name="action" type="submit" value="Delete" class="btn btn-danger" title="Deletes the motto altogether" onclick="return uniQode.confirmRemoval(event, 'motto');"/>
+                    </div>
+                }
+            </div>
+            <br/>
+            <br/>
+        </div>
+    </div>
+}
