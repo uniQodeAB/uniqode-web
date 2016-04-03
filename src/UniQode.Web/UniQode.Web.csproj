@@ -202,6 +202,7 @@
     <Content Include="Content\favicon-16x16.png" />
     <Content Include="Content\favicon-32x32.png" />
     <Content Include="Content\favicon-96x96.png" />
+    <Content Include="Content\img\bg_top.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Content\img\q_logo.png" />
     <Content Include="Content\img\logo.png" />
@@ -280,6 +281,7 @@
     <Content Include="Views\Shared\EditorTemplates\MottoModel.cshtml" />
     <Content Include="Views\Shared\Partials\Admin\_SpotlightQuestions.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\WorkfieldModel.cshtml" />
+    <Content Include="Views\Shared\Partials\_Mottos.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

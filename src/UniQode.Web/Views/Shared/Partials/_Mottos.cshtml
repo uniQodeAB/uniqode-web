@@ -1,0 +1,14 @@
+﻿@model IEnumerable<UniQode.Models.Shared.MottoModel>
+<div id="mottos" class="container">
+    @foreach (var item in Model)
+    {
+        <div>
+            <h2>
+                "@item.Title"
+            </h2>
+            <p>
+                @item.Description
+            </p>
+        </div>
+    }
+</div>

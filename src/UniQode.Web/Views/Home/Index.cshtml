@@ -1,15 +1,17 @@
 ﻿@model UniQode.Models.FrontpageModel
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Start";
 }
-
-<h2>Index</h2>
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
+<div class="top-area">
+    <img class="logo" src="/content/img/logo.png"/>
+    <div class="note">
+        THIS IS WHAT IT-CONSULTING IS TO US
+    </div>
+    <div class="note-arrow">
+        
+    </div>
 </div>
-
-<script src="~/Scripts/jquery-1.10.2.min.js"></script>
-<script src="~/Scripts/jquery.validate.min.js"></script>
-<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<div class="container body-content">
+    @Html.Action("Mottos", "Home", new { preview = Request["preview"] })
+</div>
