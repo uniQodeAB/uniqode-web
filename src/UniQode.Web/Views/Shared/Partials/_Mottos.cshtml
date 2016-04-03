@@ -1,14 +1,40 @@
 ﻿@model IEnumerable<UniQode.Models.Shared.MottoModel>
-<div id="mottos" class="container">
-    @foreach (var item in Model)
-    {
-        <div>
-            <h2>
-                "@item.Title"
-            </h2>
-            <p>
-                @item.Description
-            </p>
-        </div>
-    }
+<div id="mottos" class="mottos">
+    <div class="container body-content">
+        @for (var i = 0; i < Model.Count(); i++)
+        {
+            if (i % 2 == 0)
+            {
+                <div class="row motto">
+                    <div class="col-md-7">
+                        <h2>
+                            "@Model.ElementAt(i).Title"
+                        </h2>
+                        <p>
+                            @Model.ElementAt(i).Description
+                        </p>
+                    </div>
+                    <div class="col-md-5">
+                        <!--todo: insert image of employee etc-->
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="row motto">
+                    <div class="col-md-5">
+                        <!--todo: insert image of employee etc-->
+                    </div>
+                    <div class="col-md-7">
+                        <h2>
+                            "@Model.ElementAt(i).Title"
+                        </h2>
+                        <p>
+                            @Model.ElementAt(i).Description
+                        </p>
+                    </div>
+                </div>
+            }
+        }
+    </div>
 </div>

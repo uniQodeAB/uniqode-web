@@ -1,12 +1,23 @@
 ﻿body {
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-size: 16px !important;
     padding-top: 50px;
     padding-bottom: 20px;
 }
 
+h1, h2, h3, h4 {
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 2.8em !important;
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 100px !important;
+    padding-right: 100px !important;
 }
 
 .qgroup {
@@ -19,6 +30,33 @@
 	background: linear-gradient(to right, rgba(29,29,29,1) 0%,rgba(48,48,48,1) 0%,rgba(48,48,48,1) 100%);/* W3C */
 	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d1d1d', endColorstr='#303030',GradientType=1 );  IE6-9 */
 }
+
+.trailing-arrow {
+    border-top: solid transparent 20px;
+    border-left: solid transparent 20px;
+    border-right: solid transparent 20px;
+    width: 20px;
+    margin: 0 auto;
+}
+    .trailing-arrow.green {
+        border-top-color: rgb(142, 198, 134);
+    }
+    .trailing-arrow.green-opac {
+        border-top-color: rgb(142, 198, 134);
+        border-top-color: rgba(142, 198, 134, 0.4);
+    }
+
+.note {
+    padding: 20px;
+    width: 480px;
+    margin: 0 auto;
+    font-size: 1.5em;
+    text-align: center;
+}
+    .note.green {
+        background: rgb(142, 198, 134);
+        color: #fff;
+    }
 
 .top-area {
     background: url('/content/img/bg_top.jpg');
@@ -33,19 +71,30 @@
         width: 670px;
         margin: 0 auto 80px auto;
     }
-    .top-area .note {
-        background: #8EC686;
-        color: #fff;
-        padding: 20px;
-        width: 480px;
-        margin: 0 auto;
-        font-size: 1.5em;
-        text-align:center;
+
+.mottos {
+    background: rgb(222, 230, 233);
+    color: rgb(69, 96, 95);
+    line-height: 2em
+}
+    .mottos .motto {
+        padding-top: 30px;
     }
-    .top-area .note-arrow {
-        border-top: solid #8EC686 20px;
-        border-left: solid transparent 20px;
-        border-right: solid transparent 20px;
-        width: 20px;
-        margin: 0 auto;
+    .mottos .motto:last-child {
+        margin-bottom: 60px;
+    }
+
+.workfields {
+    color: rgb(81, 119, 77);
+    background: rgb(228, 238, 228);
+    padding-bottom: 50px;
+}
+.workfields .title {
+    background: rgb(142, 198, 134);
+    background: rgba(142, 198, 134, 0.4);
+    text-align: center;
+    padding: 20px;
+}
+    .workfields .title h2 {
+        margin: 30px 0;
     }

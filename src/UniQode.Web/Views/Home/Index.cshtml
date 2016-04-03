@@ -5,13 +5,12 @@
 }
 <div class="top-area">
     <img class="logo" src="/content/img/logo.png"/>
-    <div class="note">
+    <div class="note green">
         THIS IS WHAT IT-CONSULTING IS TO US
     </div>
-    <div class="note-arrow">
+    <div class="trailing-arrow green">
         
     </div>
 </div>
-<div class="container body-content">
-    @Html.Action("Mottos", "Home", new { preview = Request["preview"] })
-</div>
+@Html.Action("Mottos", "Home", new { preview = Request["preview"] })
+@Html.Action("Workfields", "Home", new { preview = Request["preview"] })

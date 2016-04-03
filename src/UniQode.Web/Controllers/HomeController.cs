@@ -10,12 +10,14 @@ namespace UniQode.Web.Controllers
 {
     public class HomeController : Controller
     {
-        public HomeController(IMultiTenantService<Motto, Guid> mottoService)
+        public HomeController(IMultiTenantService<Motto, Guid> mottoService, IMultiTenantService<WorkField, Guid> workfieldService)
         {
             _mottoService = mottoService;
+            _workfieldService = workfieldService;
         }
 
         private readonly IMultiTenantService<Motto, Guid> _mottoService;
+        private readonly IMultiTenantService<WorkField, Guid> _workfieldService;
 
         // GET: Home
         public ActionResult Index(bool preview = false)
@@ -41,6 +43,26 @@ namespace UniQode.Web.Controllers
             var models = dtos.Select(MottoModel.FromDto).ToList();
 
             return PartialView("Partials/_Mottos", models);
+        }
+
+        [ChildActionOnly]
+        [HttpGet]
+        public ActionResult Workfields(bool preview = false)
+        {
+            ICollection<WorkField> dtos = null;
+
+            if (preview)
+            {
+                dtos = _workfieldService.Secondary.List(true);
+            }
+            else
+            {
+                dtos = _workfieldService.Primary.List(true);
+            }
+
+            var models = dtos.Select(WorkFieldModel.FromDto).ToList();
+
+            return PartialView("Partials/_Workfields", models);
         }
     }
 }
