@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using Newtonsoft.Json;
@@ -128,6 +129,27 @@ namespace UniQode.Web.Controllers
             }
 
             return RedirectToAction("Index", "Admin");
+        }
+
+        [AllowAnonymous]
+        [ChildActionOnly]
+        [HttpGet]
+        public ActionResult Public(bool preview = false)
+        {
+            ICollection<WorkField> dtos = null;
+
+            if (preview)
+            {
+                dtos = _workfieldService.Secondary.List(true);
+            }
+            else
+            {
+                dtos = _workfieldService.Primary.List();
+            }
+
+            var models = dtos.Select(WorkFieldModel.FromDto).ToList();
+
+            return PartialView("Partials/_Workfields", models);
         }
     }
 }

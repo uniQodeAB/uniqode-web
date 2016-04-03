@@ -29,6 +29,9 @@ namespace UniQode.Models.Shared
 
         public static WorkFieldModel FromDto(WorkField dto)
         {
+            if (dto == null)
+                return null;
+
             return new WorkFieldModel
             {
                 Id = dto.Id,

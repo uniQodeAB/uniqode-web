@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Security.Principal;
 using UniQode.Common;
 using UniQode.Contracts;
@@ -51,8 +52,13 @@ namespace UniQode.Services
 
         public TEntity Get(TIdentifier id, bool invalidateCache = false)
         {
+            return Get(o => o.Id.Equals(id), invalidateCache);
+        }
+
+        public TEntity Get(Func<TEntity, bool> predicate, bool invalidateCache = false)
+        {
             var list = List(invalidateCache);
-            return list.FirstOrDefault(o => o.Id.Equals(id));
+            return list.FirstOrDefault(predicate);
         }
 
         public ICollection<TEntity> List(bool invalidateCache = false)

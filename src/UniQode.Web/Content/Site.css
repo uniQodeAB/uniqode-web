@@ -84,17 +84,17 @@ h2 {
         margin-bottom: 60px;
     }
 
-.workfields {
+.workfields, .news {
     color: rgb(81, 119, 77);
     background: rgb(228, 238, 228);
     padding-bottom: 50px;
 }
-.workfields .title {
+.workfields .title, .news .title {
     background: rgb(142, 198, 134);
     background: rgba(142, 198, 134, 0.4);
     text-align: center;
     padding: 20px;
 }
-    .workfields .title h2 {
+    .workfields .title h2, .news .title h2 {
         margin: 30px 0;
     }

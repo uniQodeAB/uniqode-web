@@ -9,6 +9,7 @@ namespace UniQode.Contracts.Services
         where TEntity : class, IEntity<TIdentifier>, new()
     {
         TEntity Get(TIdentifier id, bool invalidateCache = false);
+        TEntity Get(Func<TEntity, bool> predicate, bool invalidateCache = false);
         ICollection<TEntity> List(bool invalidateCache = false);
         TEntity Create(TEntity obj, IIdentity identity);
         TEntity Update(TEntity obj, IIdentity identity);

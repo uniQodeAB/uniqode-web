@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using UniQode.Common.Extensions;
 using UniQode.Entities.Data.Core;
 
 namespace UniQode.Entities.Data
@@ -9,22 +8,12 @@ namespace UniQode.Entities.Data
     [Table("NewsArticles")]
     public class NewsArticle : Entity<long>
     {
-        private string _title;
-
         [Required, MaxLength(100)]
-        public string Title
-        {
-            get { return _title; }
-            set
-            {
-                _title = value;
-                SearchableTitle = _title.SanitizeTitle();
-            }
-        }
+        public string Title { get; set; }
 
         [Index(IsUnique = true)]
         [Required, MaxLength(100)]
-        public string SearchableTitle { get; private set; }
+        public string SearchableTitle { get; set; }
 
         [Required]
         public string Body { get; set; }

@@ -16,6 +16,9 @@ namespace UniQode.Models.Shared
 
         public static SpotlightQuestionModel FromDto(SpotlightQuestion dto)
         {
+            if (dto == null)
+                return null;
+
             return new SpotlightQuestionModel
             {
                 Id = dto.Id,

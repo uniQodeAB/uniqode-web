@@ -1,0 +1,17 @@
+﻿@model UniQode.Models.Shared.NewsArticleModel
+
+@{
+    ViewBag.Title = "News";
+}
+<div id="news" class="news">
+    <div class="title">
+        <h2>@Model.Title</h2>
+        <h3>@Model.Created.ToString("dd MMM, yyyy").ToUpper()</h3>
+    </div>
+    <div class="trailing-arrow green-opac">
+
+    </div>
+    <div class="container body-content">
+        @Html.Raw(Model.Body)
+    </div>
+</div>

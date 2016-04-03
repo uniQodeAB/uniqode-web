@@ -30,6 +30,9 @@ namespace UniQode.Models.Shared
 
         public static MottoModel FromDto(Motto dto)
         {
+            if (dto == null)
+                return null;
+
             return new MottoModel
             {
                 Id = dto.Id,

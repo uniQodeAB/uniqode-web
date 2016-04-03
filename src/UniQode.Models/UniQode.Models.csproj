@@ -74,10 +74,15 @@
     <Compile Include="Admin\StartModel.cs" />
     <Compile Include="FrontpageModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shared\NewsArticleModel.cs" />
     <Compile Include="Shared\SpotlightQuestionModel.cs" />
     <Compile Include="Shared\WorkFieldModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\UniQode.Common\UniQode.Common.csproj">
+      <Project>{924776b0-419e-4138-989b-5ee558667530}</Project>
+      <Name>UniQode.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UniQode.Entities.Data\UniQode.Entities.Data.csproj">
       <Project>{c209c0be-a814-496e-83e1-7d0c67bc46f7}</Project>
       <Name>UniQode.Entities.Data</Name>

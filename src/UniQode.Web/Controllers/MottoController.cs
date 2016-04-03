@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -132,6 +133,27 @@ namespace UniQode.Web.Controllers
             }
 
             return RedirectToAction("Index", "Admin");
+        }
+
+        [AllowAnonymous]
+        [ChildActionOnly]
+        [HttpGet]
+        public ActionResult Public(bool preview = false)
+        {
+            ICollection<Motto> dtos = null;
+
+            if (preview)
+            {
+                dtos = _mottoService.Secondary.List(true);
+            }
+            else
+            {
+                dtos = _mottoService.Primary.List();
+            }
+
+            var models = dtos.Select(MottoModel.FromDto).ToList();
+
+            return PartialView("Partials/_Mottos", models);
         }
     }
 }

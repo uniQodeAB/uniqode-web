@@ -1,68 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web.Mvc;
 using UniQode.Contracts.Services;
 using UniQode.Entities.Data;
-using UniQode.Models.Shared;
 
 namespace UniQode.Web.Controllers
 {
     public class HomeController : Controller
     {
-        public HomeController(IMultiTenantService<Motto, Guid> mottoService, IMultiTenantService<WorkField, Guid> workfieldService)
+        public HomeController(IMultiTenantService<NewsArticle, long> newsArticleService)
         {
-            _mottoService = mottoService;
-            _workfieldService = workfieldService;
+            _newsArticleService = newsArticleService;
         }
+        
+        private readonly IMultiTenantService<NewsArticle, long> _newsArticleService;
 
-        private readonly IMultiTenantService<Motto, Guid> _mottoService;
-        private readonly IMultiTenantService<WorkField, Guid> _workfieldService;
-
-        // GET: Home
-        public ActionResult Index(bool preview = false)
+        public ActionResult Index(bool preview = false, long? p = null)
         {
+            if (p != null)
+            {
+                // this is the legacy route for news arcticles
+
+                var newsArticle = _newsArticleService.Primary.Get(p.Value);
+
+                if (newsArticle == null)
+                {
+                    return RedirectToAction("NotFound", "Error");
+                }
+
+                return RedirectToActionPermanent("Public", "News", new { newsArticle.SearchableTitle });
+            }
             return View();
-        }
-
-        [ChildActionOnly]
-        [HttpGet]
-        public ActionResult Mottos(bool preview = false)
-        {
-            ICollection<Motto> dtos = null;
-
-            if (preview)
-            {
-                dtos = _mottoService.Secondary.List(true);
-            }
-            else
-            {
-                dtos = _mottoService.Primary.List(true);
-            }
-
-            var models = dtos.Select(MottoModel.FromDto).ToList();
-
-            return PartialView("Partials/_Mottos", models);
-        }
-
-        [ChildActionOnly]
-        [HttpGet]
-        public ActionResult Workfields(bool preview = false)
-        {
-            ICollection<WorkField> dtos = null;
-
-            if (preview)
-            {
-                dtos = _workfieldService.Secondary.List(true);
-            }
-            else
-            {
-                dtos = _workfieldService.Primary.List(true);
-            }
-
-            var models = dtos.Select(WorkFieldModel.FromDto).ToList();
-
-            return PartialView("Partials/_Workfields", models);
         }
     }
 }
