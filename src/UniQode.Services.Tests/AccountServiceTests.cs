@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Threading;
 using UniQode.Contracts;
+using UniQode.Contracts.Repositories;
 using UniQode.Contracts.Services;
 using UniQode.Data.Models;
 using UniQode.Data.Repositories;
 using UniQode.Entities.Data;
-using UniQode.Services.Cache;
+using UniQode.Services.Providers;
 using Xunit;
 
 namespace UniQode.Services.Tests

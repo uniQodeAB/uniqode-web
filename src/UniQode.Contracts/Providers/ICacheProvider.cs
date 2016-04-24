@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UniQode.Contracts
+namespace UniQode.Contracts.Providers
 {
     public interface ICacheProvider
     {

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniQode.Web", "UniQode.Web\UniQode.Web.csproj", "{18C069C9-2936-4F7F-9C81-3F4959BC4425}"
 EndProject
@@ -32,6 +32,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniQode.Services.Tests", "UniQode.Services.Tests\UniQode.Services.Tests.csproj", "{0205E6C5-9F05-485A-B990-B4204FEE6CF0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniQode.Cli", "UniQode.Cli\UniQode.Cli.csproj", "{659D1A78-F740-499F-92F2-C47DF6A07794}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniQode.Testing", "UniQode.Testing\UniQode.Testing.csproj", "{63EB4F1B-AF27-47A3-9C74-B49397B78888}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{659D1A78-F740-499F-92F2-C47DF6A07794}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{659D1A78-F740-499F-92F2-C47DF6A07794}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{659D1A78-F740-499F-92F2-C47DF6A07794}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63EB4F1B-AF27-47A3-9C74-B49397B78888}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63EB4F1B-AF27-47A3-9C74-B49397B78888}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63EB4F1B-AF27-47A3-9C74-B49397B78888}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63EB4F1B-AF27-47A3-9C74-B49397B78888}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,5 +108,6 @@ Global
 		{924776B0-419E-4138-989B-5EE558667530} = {F2CA129F-A433-4541-8B41-3B324BF2882A}
 		{ADC53509-565E-43B9-ABB2-1196B6300E14} = {A994616D-FEEF-4487-82FE-BAD324602A6C}
 		{0205E6C5-9F05-485A-B990-B4204FEE6CF0} = {A994616D-FEEF-4487-82FE-BAD324602A6C}
+		{63EB4F1B-AF27-47A3-9C74-B49397B78888} = {A994616D-FEEF-4487-82FE-BAD324602A6C}
 	EndGlobalSection
 EndGlobal

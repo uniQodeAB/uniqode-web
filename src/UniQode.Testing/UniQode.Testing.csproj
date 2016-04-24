@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DEC89778-C658-4891-B0DB-3DB017EE1282}</ProjectGuid>
+    <ProjectGuid>{63EB4F1B-AF27-47A3-9C74-B49397B78888}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UniQode.Contracts</RootNamespace>
-    <AssemblyName>UniQode.Contracts</AssemblyName>
+    <RootNamespace>UniQode.Testing</RootNamespace>
+    <AssemblyName>UniQode.Testing</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,7 +31,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,29 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Providers\ICacheProvider.cs" />
-    <Compile Include="Providers\IStorageProvider.cs" />
+    <Compile Include="CommonResources.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\IAdminRepository.cs" />
-    <Compile Include="Repositories\IPrimaryRepository.cs" />
-    <Compile Include="Repositories\IRepository.cs" />
-    <Compile Include="Repositories\ISecondaryRepository.cs" />
-    <Compile Include="Services\ICrudService.cs" />
-    <Compile Include="Services\IAccountService.cs" />
-    <Compile Include="Services\IImageService.cs" />
-    <Compile Include="Services\IMultiTenantService.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\UniQode.Entities.Data\UniQode.Entities.Data.csproj">
-      <Project>{c209c0be-a814-496e-83e1-7d0c67bc46f7}</Project>
-      <Name>UniQode.Entities.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\UniQode.Entities\UniQode.Entities.csproj">
-      <Project>{297c0ef8-8722-4a2e-aa59-570ba80a036f}</Project>
-      <Name>UniQode.Entities</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

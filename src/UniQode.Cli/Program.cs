@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UniQode.Contracts;
+using UniQode.Contracts.Repositories;
 using UniQode.Contracts.Services;
 using UniQode.Data;
 using UniQode.Data.Models;
 using UniQode.Data.Repositories;
 using UniQode.Entities.Data;
 using UniQode.Services;
-using UniQode.Services.Cache;
+using UniQode.Services.Providers;
 
 namespace UniQode.Cli
 {

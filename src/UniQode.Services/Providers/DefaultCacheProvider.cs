@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Runtime.Caching;
-using UniQode.Contracts;
+using UniQode.Contracts.Providers;
 
-namespace UniQode.Services.Cache
+namespace UniQode.Services.Providers
 {
     public class DefaultCacheProvider : ICacheProvider
     {

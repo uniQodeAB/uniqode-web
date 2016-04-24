@@ -4,8 +4,9 @@ using System.Linq;
 using UniQode.Common;
 using UniQode.Common.Utils;
 using UniQode.Contracts;
+using UniQode.Contracts.Providers;
+using UniQode.Contracts.Repositories;
 using UniQode.Contracts.Services;
-using UniQode.Data;
 using UniQode.Entities.Data;
 
 namespace UniQode.Services

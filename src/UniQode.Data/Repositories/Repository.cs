@@ -4,6 +4,7 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Linq.Expressions;
 using UniQode.Contracts;
+using UniQode.Contracts.Repositories;
 
 namespace UniQode.Data.Repositories
 {

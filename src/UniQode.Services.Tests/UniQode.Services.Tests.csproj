@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountServiceTests.cs" />
+    <Compile Include="AzureBlobStorageTransportTests.cs" />
     <Compile Include="MottoServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -90,6 +91,10 @@
     <ProjectReference Include="..\UniQode.Services\UniQode.Services.csproj">
       <Project>{d2531e28-5ccc-4e5a-a352-4c7c6d06515d}</Project>
       <Name>UniQode.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UniQode.Testing\UniQode.Testing.csproj">
+      <Project>{63eb4f1b-af27-47a3-9c74-b49397b78888}</Project>
+      <Name>UniQode.Testing</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

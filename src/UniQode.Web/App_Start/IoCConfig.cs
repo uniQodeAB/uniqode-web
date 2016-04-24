@@ -1,14 +1,12 @@
-﻿using System;
-using System.Data.Entity;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Autofac;
 using Autofac.Integration.Mvc;
 using UniQode.Contracts;
-using UniQode.Data;
+using UniQode.Contracts.Providers;
+using UniQode.Contracts.Repositories;
 using UniQode.Data.Models;
 using UniQode.Data.Repositories;
-using UniQode.Services.Cache;
+using UniQode.Services.Providers;
 
 namespace UniQode.Web
 {

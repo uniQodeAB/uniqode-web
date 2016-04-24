@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace UniQode.Contracts
+namespace UniQode.Contracts.Repositories
 {
     public interface IRepository<TEntity> : IDisposable
         where TEntity : class, new()

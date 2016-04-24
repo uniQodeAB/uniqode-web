@@ -1,4 +1,6 @@
 ﻿using UniQode.Contracts;
+using UniQode.Contracts.Providers;
+using UniQode.Contracts.Repositories;
 using UniQode.Contracts.Services;
 using UniQode.Entities.Data.Core;
 

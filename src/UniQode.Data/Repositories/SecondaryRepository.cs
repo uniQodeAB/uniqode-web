@@ -1,4 +1,5 @@
 using UniQode.Contracts;
+using UniQode.Contracts.Repositories;
 using UniQode.Data.Models;
 
 namespace UniQode.Data.Repositories

@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Security.Principal;
 using UniQode.Common;
 using UniQode.Contracts;
+using UniQode.Contracts.Providers;
+using UniQode.Contracts.Repositories;
 using UniQode.Contracts.Services;
 using UniQode.Entities.Data.Core;
 
