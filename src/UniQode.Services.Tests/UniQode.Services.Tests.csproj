@@ -67,7 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountServiceTests.cs" />
-    <Compile Include="AzureBlobStorageTransportTests.cs" />
+    <Compile Include="AzureBlobStorageProviderTests.cs" />
     <Compile Include="MottoServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
