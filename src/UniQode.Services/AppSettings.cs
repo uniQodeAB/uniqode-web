@@ -22,8 +22,15 @@ namespace UniQode.Services
                     //suppress
                 }
 
-                if (string.IsNullOrEmpty(_facebookAppId))
-                    _facebookAppId = ConfigurationManager.AppSettings["facebook:AppId"];
+                try
+                {
+                    if (string.IsNullOrEmpty(_facebookAppId))
+                        _facebookAppId = ConfigurationManager.AppSettings["facebook:AppId"];
+                }
+                catch (Exception)
+                {
+                    //suppress
+                }
 
                 return _facebookAppId;
             }
