@@ -15,6 +15,9 @@ namespace UniQode.Entities.Data
         [Required, MaxLength(100)]
         public string SearchableTitle { get; set; }
 
+        [Required, MaxLength(32), Index]
+        public string Category { get; set; }
+
         [Required]
         public string Body { get; set; }
 

@@ -1,0 +1,19 @@
+﻿@model IEnumerable<UniQode.Models.Shared.NewsArticleModel>
+<div id="news">
+    <div class="container body-content" style="padding-top: 0;">
+        @foreach (var article in Model)
+        {
+            <div class="row news-article">
+                <div class="col-md-2">
+                    @article.Created.ToString("dd MMM, yyyy").ToUpper()
+                </div>
+                <div class="col-md-8">
+                    @article.Title
+                </div>
+                <div class="col-md-2">
+                    <a href="#">Edit</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>

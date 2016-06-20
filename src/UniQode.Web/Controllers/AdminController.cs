@@ -12,13 +12,15 @@ namespace UniQode.Web.Controllers
     public class AdminController : Controller
     {
         public AdminController(
-            IMultiTenantService<SpotlightQuestion, Guid> spotlightQuestionService
+            IMultiTenantService<SpotlightQuestion, Guid> spotlightQuestionService, IMultiTenantService<NewsArticle, long> newsArticleService
             )
         {
             _spotlightQuestionService = spotlightQuestionService;
+            _newsArticleService = newsArticleService;
         }
 
         private readonly IMultiTenantService<SpotlightQuestion, Guid> _spotlightQuestionService;
+        private readonly IMultiTenantService<NewsArticle, long> _newsArticleService;
 
         public ActionResult Index(bool invalidateCache = false)
         {

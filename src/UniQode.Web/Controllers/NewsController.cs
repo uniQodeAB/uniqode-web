@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
+using System.Web.Mvc;
 using UniQode.Contracts.Services;
 using UniQode.Entities.Data;
 using UniQode.Models.Shared;
@@ -39,6 +40,17 @@ namespace UniQode.Web.Controllers
             var model = NewsArticleModel.FromDto(dto);
 
             return View(model);
+        }
+
+        [ChildActionOnly]
+        [HttpGet]
+        public ActionResult List()
+        {
+            var dtos = _newsArticleService.Secondary.List(true);
+            var models = dtos.Select(NewsArticleModel.FromDto).ToList();
+            models.Sort((a, b) => -1 * a.Created.CompareTo(b.Created));
+
+            return PartialView("Partials/Admin/_News", models);
         }
     }
 }

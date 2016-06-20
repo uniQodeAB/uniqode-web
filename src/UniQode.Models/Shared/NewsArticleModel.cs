@@ -27,6 +27,9 @@ namespace UniQode.Models.Shared
         [Required, MaxLength(100)]
         public string SearchableTitle { get; private set; }
 
+        [Required, MaxLength(32)]
+        public string Category { get; set; }
+
         [Required]
         public string Body { get; set; }
 
@@ -45,6 +48,7 @@ namespace UniQode.Models.Shared
             {
                 Id = dto.Id,
                 Title = dto.Title,
+                Category = dto.Category,
                 Body = dto.Body,
                 Created = dto.Created,
                 Modified = dto.Modified
@@ -58,6 +62,7 @@ namespace UniQode.Models.Shared
                 Id = this.Id,
                 Title = this.Title,
                 SearchableTitle = this.SearchableTitle,
+                Category = this.Category,
                 Body = this.Body,
                 Created = this.Created,
                 Modified = this.Modified

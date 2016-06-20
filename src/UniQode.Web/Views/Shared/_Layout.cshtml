@@ -1,9 +1,14 @@
-﻿<!DOCTYPE html>
-<html>
+﻿@using UniQode.Services
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - uniQode.se</title>
+    <meta property="og:title" content="@ViewBag.Title" />
+    <meta property="og:description" content="@ViewBag.Description" />
+    <meta property="og:url" content="@Request.Url" />
+    <meta property="og:image" content="@($"{Request.Url?.Scheme}://{Request.Url?.Authority}/{"content/img/logo.png"}")" />
 
     <link rel="apple-touch-icon" sizes="57x57" href="~/content/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="~/content/apple-touch-icon-60x60.png">
@@ -30,6 +35,15 @@
     <script src="~/scripts/modernizr-2.6.2.js"></script>
 </head>
 <body>
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=@AppSettings.FacebookAppId";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">

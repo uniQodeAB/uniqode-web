@@ -57,9 +57,25 @@
     <Compile Include="Migrations\PrimaryModel\201604022219491_LongerDescriptions.Designer.cs">
       <DependentUpon>201604022219491_LongerDescriptions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\PrimaryModel\201606141106072_NewsArticles.cs" />
+    <Compile Include="Migrations\PrimaryModel\201606141106072_NewsArticles.Designer.cs">
+      <DependentUpon>201606141106072_NewsArticles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\PrimaryModel\201606141321350_AddNewsArticleCategory.cs" />
+    <Compile Include="Migrations\PrimaryModel\201606141321350_AddNewsArticleCategory.Designer.cs">
+      <DependentUpon>201606141321350_AddNewsArticleCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\SecondaryModel\201604022220334_LongerDescriptions.cs" />
     <Compile Include="Migrations\SecondaryModel\201604022220334_LongerDescriptions.Designer.cs">
       <DependentUpon>201604022220334_LongerDescriptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\SecondaryModel\201606141105416_NewsArticles.cs" />
+    <Compile Include="Migrations\SecondaryModel\201606141105416_NewsArticles.Designer.cs">
+      <DependentUpon>201606141105416_NewsArticles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\SecondaryModel\201606141322470_AddNewsArticleCategory.cs" />
+    <Compile Include="Migrations\SecondaryModel\201606141322470_AddNewsArticleCategory.Designer.cs">
+      <DependentUpon>201606141322470_AddNewsArticleCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="Repositories\AdminRepository.cs" />
     <Compile Include="Models\BaseDbContext.cs" />
@@ -115,12 +131,39 @@
     <EmbeddedResource Include="Migrations\PrimaryModel\201604022219491_LongerDescriptions.resx">
       <DependentUpon>201604022219491_LongerDescriptions.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\PrimaryModel\201606141106072_NewsArticles.resx">
+      <DependentUpon>201606141106072_NewsArticles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\PrimaryModel\201606141321350_AddNewsArticleCategory.resx">
+      <DependentUpon>201606141321350_AddNewsArticleCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\SecondaryModel\201603121226229_Initial.resx">
       <DependentUpon>201603121226229_Initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\SecondaryModel\201604022220334_LongerDescriptions.resx">
       <DependentUpon>201604022220334_LongerDescriptions.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\SecondaryModel\201606141105416_NewsArticles.resx">
+      <DependentUpon>201606141105416_NewsArticles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\SecondaryModel\201606141322470_AddNewsArticleCategory.resx">
+      <DependentUpon>201606141322470_AddNewsArticleCategory.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Migrations\PrimaryModel\Sql\Down\201606141106072_NewsArticles.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\PrimaryModel\Sql\Up\201606141106072_NewsArticles.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\SecondaryModel\Sql\Down\201606141105416_NewsArticles.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\SecondaryModel\Sql\Up\201606141105416_NewsArticles.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,8 +1,19 @@
-﻿@model UniQode.Models.Shared.NewsArticleModel
+﻿@using UniQode.Web.Helpers
+@model UniQode.Models.Shared.NewsArticleModel
 
 @{
-    ViewBag.Title = "News";
+    ViewBag.Title = @Model.Title;
+    ViewBag.Description = @Model.Body;
 }
+<div class="top-area">
+    <img class="logo" src="/content/img/logo.png" alt="uniQode" />
+    <div class="note green">
+        @Model.Category
+    </div>
+    <div class="trailing-arrow green">
+
+    </div>
+</div>
 <div id="news" class="news">
     <div class="title">
         <h2>@Model.Title</h2>
@@ -13,5 +24,9 @@
     </div>
     <div class="container body-content">
         @Html.Raw(Model.Body)
+    </div>
+    <div class="container body-content social-content">
+                @LinkHelper.ShareOnLinkedIn(Request.RawUrl)
+                @LinkHelper.ShareOnFacebook(Request.RawUrl)
     </div>
 </div>
