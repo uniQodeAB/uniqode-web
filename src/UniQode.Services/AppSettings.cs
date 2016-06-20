@@ -13,7 +13,14 @@ namespace UniQode.Services
                 if (!string.IsNullOrEmpty(_facebookAppId))
                     return _facebookAppId;
 
-                _facebookAppId = Environment.GetEnvironmentVariable("UNIQODEWEB_FACEBOOK_APPID");
+                try
+                {
+                    _facebookAppId = Environment.GetEnvironmentVariable("UNIQODEWEB_FACEBOOK_APPID");
+                }
+                catch (Exception)
+                {
+                    //suppress
+                }
 
                 if (string.IsNullOrEmpty(_facebookAppId))
                     _facebookAppId = ConfigurationManager.AppSettings["facebook:AppId"];
