@@ -18,26 +18,25 @@ namespace UniQode.Web.Helpers
 
         public static IHtmlString ShareOnLinkedIn(string url)
         {
-            var encodedUrl = HttpUtility.UrlEncode(url);
-
+            url = HttpUtility.UrlEncode(url);
             var builder = new StringBuilder();
 
             builder.Append("<script src='//platform.linkedin.com/in.js' type='text/javascript'> lang: en_US </script>");
 
-            builder.AppendFormat("<script type='IN/Share' data-url='{0}' data-counter='none'></script>", encodedUrl);
+            builder.AppendFormat("<script type='IN/Share' data-url='{0}' data-counter='none'></script>", url);
             
             return new HtmlString(builder.ToString()); 
         }
 
         public static IHtmlString ShareOnFacebook(string url)
         {
-            var encodedUrl = HttpUtility.UrlEncode(url);
+            url = HttpUtility.UrlEncode(url);
             var builder = new StringBuilder();
 
-            builder.AppendFormat("<div class='fb-share-button' data-href='{0}' data-layout='button' data-mobile-iframe='true'>", encodedUrl);
+            builder.AppendFormat("<div class='fb-share-button' data-href='{0}' data-layout='button' data-mobile-iframe='true'>", url);
             builder.AppendFormat(
                 "<a class='fb-xfbml-parse-ignore' target='_blank' href='https://www.facebook.com/sharer/sharer.php?u={0}src=sdkpreparse'>Share</a>",
-                encodedUrl);
+                url);
             builder.Append("</div>");
 
             return new HtmlString(builder.ToString());

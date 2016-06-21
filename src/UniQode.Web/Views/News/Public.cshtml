@@ -26,7 +26,7 @@
         @Html.Raw(Model.Body)
     </div>
     <div class="container body-content social-content">
-                @LinkHelper.ShareOnLinkedIn(Request.RawUrl)
-                @LinkHelper.ShareOnFacebook(Request.RawUrl)
+                @LinkHelper.ShareOnLinkedIn(Request.Url?.AbsoluteUri)
+                @LinkHelper.ShareOnFacebook(Request.Url?.AbsoluteUri)
     </div>
 </div>
