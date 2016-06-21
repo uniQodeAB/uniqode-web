@@ -18,7 +18,7 @@ namespace UniQode.Web.Helpers
 
         public static IHtmlString ShareOnLinkedIn(string url)
         {
-            url = HttpUtility.UrlEncode(url);
+            //url = HttpUtility.UrlEncode(url);
             var builder = new StringBuilder();
 
             builder.Append("<script src='//platform.linkedin.com/in.js' type='text/javascript'> lang: en_US </script>");
@@ -30,13 +30,13 @@ namespace UniQode.Web.Helpers
 
         public static IHtmlString ShareOnFacebook(string url)
         {
-            url = HttpUtility.UrlEncode(url);
+            var encodedUrl = HttpUtility.UrlEncode(url);
             var builder = new StringBuilder();
 
             builder.AppendFormat("<div class='fb-share-button' data-href='{0}' data-layout='button' data-mobile-iframe='true'>", url);
             builder.AppendFormat(
-                "<a class='fb-xfbml-parse-ignore' target='_blank' href='https://www.facebook.com/sharer/sharer.php?u={0}src=sdkpreparse'>Share</a>",
-                url);
+                "<a class='fb-xfbml-parse-ignore' target='_blank' href='https://www.facebook.com/sharer/sharer.php?u={0}&src=sdkpreparse'>Share</a>",
+                encodedUrl);
             builder.Append("</div>");
 
             return new HtmlString(builder.ToString());
