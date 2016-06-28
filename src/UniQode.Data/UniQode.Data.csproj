@@ -65,6 +65,10 @@
     <Compile Include="Migrations\PrimaryModel\201606141321350_AddNewsArticleCategory.Designer.cs">
       <DependentUpon>201606141321350_AddNewsArticleCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\PrimaryModel\201606281338437_FixEmployeesAndExternalRefs.cs" />
+    <Compile Include="Migrations\PrimaryModel\201606281338437_FixEmployeesAndExternalRefs.Designer.cs">
+      <DependentUpon>201606281338437_FixEmployeesAndExternalRefs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\SecondaryModel\201604022220334_LongerDescriptions.cs" />
     <Compile Include="Migrations\SecondaryModel\201604022220334_LongerDescriptions.Designer.cs">
       <DependentUpon>201604022220334_LongerDescriptions.cs</DependentUpon>
@@ -76,6 +80,10 @@
     <Compile Include="Migrations\SecondaryModel\201606141322470_AddNewsArticleCategory.cs" />
     <Compile Include="Migrations\SecondaryModel\201606141322470_AddNewsArticleCategory.Designer.cs">
       <DependentUpon>201606141322470_AddNewsArticleCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\SecondaryModel\201606281336392_FixEmployeesAndExternalRefs.cs" />
+    <Compile Include="Migrations\SecondaryModel\201606281336392_FixEmployeesAndExternalRefs.Designer.cs">
+      <DependentUpon>201606281336392_FixEmployeesAndExternalRefs.cs</DependentUpon>
     </Compile>
     <Compile Include="Repositories\AdminRepository.cs" />
     <Compile Include="Models\BaseDbContext.cs" />
@@ -137,6 +145,9 @@
     <EmbeddedResource Include="Migrations\PrimaryModel\201606141321350_AddNewsArticleCategory.resx">
       <DependentUpon>201606141321350_AddNewsArticleCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\PrimaryModel\201606281338437_FixEmployeesAndExternalRefs.resx">
+      <DependentUpon>201606281338437_FixEmployeesAndExternalRefs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\SecondaryModel\201603121226229_Initial.resx">
       <DependentUpon>201603121226229_Initial.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\SecondaryModel\201606141322470_AddNewsArticleCategory.resx">
       <DependentUpon>201606141322470_AddNewsArticleCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\SecondaryModel\201606281336392_FixEmployeesAndExternalRefs.resx">
+      <DependentUpon>201606281336392_FixEmployeesAndExternalRefs.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

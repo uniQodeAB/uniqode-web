@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using UniQode.Entities.Data.Core;
 
@@ -8,6 +9,7 @@ namespace UniQode.Entities.Data
     public class ProfilePicture : UniqueEntity
     {
         [Required]
+        [ForeignKey("Id")]
         public Employee Employee { get; set; }
 
         [Required, MaxLength(256)]

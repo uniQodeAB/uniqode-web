@@ -11,7 +11,7 @@ namespace UniQode.Entities.Data
         [Required]
         public Employee Employee { get; set; }
 
-        [Required]
+        [Required, Index]
         public ExternalReferenceType Type { get; set; }
 
         [Required, MaxLength(256)]

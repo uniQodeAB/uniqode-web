@@ -2,6 +2,7 @@
 {
     public enum ExternalReferenceType
     {
+        Unknown = 0,
         Facebook,
         LinkedIn,
         Twitter,
