@@ -101,7 +101,7 @@ h2 {
 
 .note {
     padding: 20px;
-    width: 480px;
+    max-width: 480px;
     margin: 0 auto;
     font-size: 1.5em;
     text-align: center;
@@ -355,7 +355,7 @@ h2 {
         text-align: center;
         background: rgb(230, 230, 230);
         color: rgb(185, 185, 185);
-        padding: 30px 0 40px 0;
+        padding: 30px 20px 40px 20px;
     }
         .contact .title .darker {
             color: rgb(120, 120, 120);

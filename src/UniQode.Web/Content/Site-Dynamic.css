@@ -66,6 +66,10 @@
     }
 }
 @media (min-width: 0px) and (max-width: 768px) {
+    .body-content {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
     .mottos .motto:first-child {
         margin-top: -345px;
         padding-top: 180px;
@@ -79,14 +83,38 @@
     .top-area .logo {
         margin: 20px auto 45px auto;
     }
+    .spotlight h3 {
+        padding-left: 20px;
+    }
     .spotlight .title {
         padding: 30px 15%;
     }
     .employees .title {
         padding: 30px 10%;
     }
+    .spotlight .title .secondary {
+        padding-left: 0;
+    }
     .spotlight .employee-area img {
         margin-top: -65px;
+        position: relative;
+        right: -60px;
+    }
+    .spotlight .employee-info.right {
+        right: auto;
+        top: 20%;
+    }
+    .employees .title .secondary {
+        padding-left: 0;
+        line-height: 1.2em;
+        padding-top: 15px;
+    }
+    .employees .employee {
+        margin: 0 auto;
+        float: none;
+    }
+    .contact .row .row {
+        padding-left: 20px;
     }
 }
 
