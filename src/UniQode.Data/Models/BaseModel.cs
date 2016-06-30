@@ -22,7 +22,8 @@ namespace UniQode.Data.Models
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.HasDefaultSchema(_schema);
+            if(!string.IsNullOrEmpty(_schema))
+                modelBuilder.HasDefaultSchema(_schema);
 
             modelBuilder.Entity<Employee>()
                 .HasRequired(a => a.ProfilePicture)

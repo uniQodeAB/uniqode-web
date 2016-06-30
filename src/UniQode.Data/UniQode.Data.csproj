@@ -69,6 +69,7 @@
     <Compile Include="Migrations\PrimaryModel\201606281338437_FixEmployeesAndExternalRefs.Designer.cs">
       <DependentUpon>201606281338437_FixEmployeesAndExternalRefs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\SharedConfiguration.cs" />
     <Compile Include="Migrations\SecondaryModel\201604022220334_LongerDescriptions.cs" />
     <Compile Include="Migrations\SecondaryModel\201604022220334_LongerDescriptions.Designer.cs">
       <DependentUpon>201604022220334_LongerDescriptions.cs</DependentUpon>
@@ -85,6 +86,11 @@
     <Compile Include="Migrations\SecondaryModel\201606281336392_FixEmployeesAndExternalRefs.Designer.cs">
       <DependentUpon>201606281336392_FixEmployeesAndExternalRefs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Shared\201606302130085_InsertInitialEmployeeInformation.cs" />
+    <Compile Include="Migrations\Shared\201606302130085_InsertInitialEmployeeInformation.Designer.cs">
+      <DependentUpon>201606302130085_InsertInitialEmployeeInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SharedModel.cs" />
     <Compile Include="Repositories\AdminRepository.cs" />
     <Compile Include="Models\BaseDbContext.cs" />
     <Compile Include="Models\AdminModel.cs" />
@@ -163,6 +169,9 @@
     <EmbeddedResource Include="Migrations\SecondaryModel\201606281336392_FixEmployeesAndExternalRefs.resx">
       <DependentUpon>201606281336392_FixEmployeesAndExternalRefs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Shared\201606302130085_InsertInitialEmployeeInformation.resx">
+      <DependentUpon>201606302130085_InsertInitialEmployeeInformation.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -176,6 +185,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Migrations\SecondaryModel\Sql\Up\201606141105416_NewsArticles.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\Shared\Sql\Up\insert_employees.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\Shared\Sql\Up\insert_spotlightquestions.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
