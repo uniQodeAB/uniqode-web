@@ -207,6 +207,7 @@
     <Content Include="Content\img\bg_top.jpg" />
     <Content Include="Content\img\profile_picture_dummy1.png" />
     <Content Include="Content\img\profile_picture_dummy2.png" />
+    <Content Include="Content\Site-Dynamic.css" />
     <Content Include="favicon.ico" />
     <Content Include="Content\img\q_logo.png" />
     <Content Include="Content\img\logo.png" />

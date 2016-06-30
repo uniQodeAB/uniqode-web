@@ -14,7 +14,7 @@
                             @Model.Item1.ElementAt(i).Description
                         </p>
                     </div>
-                    <div class="col-md-5 employee-area">
+                    <div class="col-md-5 employee-area hidden-sm hidden-xs">
                         <img alt="@Model.Item2.ElementAt(i).FirstName @Model.Item2.ElementAt(i).LastName" src="@Model.Item2.ElementAt(i).ProfilePicture.OriginalUrl" />
                         <div class="employee-info right">
                             @Model.Item2.ElementAt(i).FirstName @Model.Item2.ElementAt(i).LastName
@@ -28,7 +28,7 @@
         {
             <div class="row motto" style="z-index: @(i+10)">
                 <div class="container body-content">
-                    <div class="col-md-5 employee-area">
+                    <div class="col-md-5 employee-area hidden-sm hidden-xs">
                         <img alt="@Model.Item2.ElementAt(i).FirstName @Model.Item2.ElementAt(i).LastName" src="@Model.Item2.ElementAt(i).ProfilePicture.OriginalUrl" />
                         <div class="employee-info left">
                             @Model.Item2.ElementAt(i).FirstName @Model.Item2.ElementAt(i).LastName
