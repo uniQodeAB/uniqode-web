@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Newtonsoft.Json;
+using UniQode.Common.Extensions;
 using UniQode.Contracts.Services;
 using UniQode.Entities.Data;
 using UniQode.Entities.Enums;
@@ -18,12 +19,14 @@ namespace UniQode.Web.Controllers
     [RoutePrefix("mottos")]
     public class MottoController : Controller
     {
-        public MottoController(IMultiTenantService<Motto, Guid> mottoService)
+        public MottoController(IMultiTenantService<Motto, Guid> mottoService, IMultiTenantService<Employee, Guid> employeeService)
         {
             _mottoService = mottoService;
+            _employeeService = employeeService;
         }
 
         private readonly IMultiTenantService<Motto, Guid> _mottoService;
+        private readonly IMultiTenantService<Employee, Guid> _employeeService;
         
         /// <summary>
         /// Used in admin view, no caching
@@ -140,20 +143,27 @@ namespace UniQode.Web.Controllers
         [HttpGet]
         public ActionResult Public(bool preview = false)
         {
-            ICollection<Motto> dtos = null;
+            ICollection<Motto> mottoDtos = null;
+            ICollection<Employee> employeeDtos = null;
 
             if (preview)
             {
-                dtos = _mottoService.Secondary.List(true);
+                mottoDtos = _mottoService.Secondary.List(true);
+                employeeDtos = _employeeService.Secondary.List(true);
             }
             else
             {
-                dtos = _mottoService.Primary.List();
+                mottoDtos = _mottoService.Primary.List();
+                employeeDtos = _employeeService.Primary.List();
             }
 
-            var models = dtos.Select(MottoModel.FromDto).ToList();
+            var mottoModels = mottoDtos.Select(MottoModel.FromDto).ToList();
+            var employeeModels = employeeDtos.Select(EmployeeModel.FromDto).ToList();
+            employeeModels.Shuffle();
 
-            return PartialView("Partials/_Mottos", models);
+            var model = Tuple.Create(mottoModels, employeeModels);
+
+            return PartialView("Partials/_Mottos", model);
         }
     }
 }

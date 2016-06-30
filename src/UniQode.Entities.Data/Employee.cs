@@ -29,12 +29,12 @@ namespace UniQode.Entities.Data
         public string Description { get; set; }
 
         [Required]
-        public ProfilePicture ProfilePicture { get; set; }
+        public virtual ProfilePicture ProfilePicture { get; set; }
 
         [Required]
-        public ICollection<Spotlight> Spotlights { get; set; }
+        public virtual ICollection<Spotlight> Spotlights { get; set; }
 
         [Required]
-        public ICollection<ExternalReference> ExternalReferences { get; set; }
+        public virtual ICollection<ExternalReference> ExternalReferences { get; set; }
     }
 }

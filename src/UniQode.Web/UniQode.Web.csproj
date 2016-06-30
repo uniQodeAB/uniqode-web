@@ -204,6 +204,8 @@
     <Content Include="Content\favicon-32x32.png" />
     <Content Include="Content\favicon-96x96.png" />
     <Content Include="Content\img\bg_top.jpg" />
+    <Content Include="Content\img\profile_picture_dummy1.png" />
+    <Content Include="Content\img\profile_picture_dummy2.png" />
     <Content Include="favicon.ico" />
     <Content Include="Content\img\q_logo.png" />
     <Content Include="Content\img\logo.png" />
@@ -245,6 +247,7 @@
     <Compile Include="Attributes\ModelStateTempDataTransfer.cs" />
     <Compile Include="Attributes\ValidateModelStateAttribute.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\SpotlightController.cs" />
@@ -292,6 +295,9 @@
     <Content Include="Views\Error\Index.cshtml" />
     <Content Include="Views\Error\NotFound.cshtml" />
     <Content Include="Views\Shared\Partials\Admin\_News.cshtml" />
+    <Content Include="Views\Shared\Partials\_Employees.cshtml" />
+    <Content Include="Views\Shared\Partials\_Spotlight.cshtml" />
+    <Content Include="Views\Shared\Partials\_Contact.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -301,6 +307,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Employee\" />
     <Folder Include="Views\Motto\" />
     <Folder Include="Views\Spotlight\" />
     <Folder Include="Views\Workfield\" />

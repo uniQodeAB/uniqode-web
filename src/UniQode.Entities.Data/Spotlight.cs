@@ -8,7 +8,7 @@ namespace UniQode.Entities.Data
     public class Spotlight : UniqueEntity
     {
         [Required]
-        public SpotlightQuestion SpotlightQuestion { get; set; }
+        public virtual SpotlightQuestion SpotlightQuestion { get; set; }
 
         [Required]
         public Employee Employee { get; set; }

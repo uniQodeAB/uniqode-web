@@ -69,12 +69,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Shared\EmployeeModel.cs" />
+    <Compile Include="Shared\ExternalReferenceModel.cs" />
     <Compile Include="Shared\MottoModel.cs" />
     <Compile Include="Authentication\LoginModel.cs" />
     <Compile Include="Admin\StartModel.cs" />
     <Compile Include="FrontpageModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shared\NewsArticleModel.cs" />
+    <Compile Include="Shared\ProfilePictureModel.cs" />
+    <Compile Include="Shared\SpotlightModel.cs" />
     <Compile Include="Shared\SpotlightQuestionModel.cs" />
     <Compile Include="Shared\WorkFieldModel.cs" />
   </ItemGroup>

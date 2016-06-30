@@ -1,40 +1,50 @@
-﻿@model IEnumerable<UniQode.Models.Shared.MottoModel>
+﻿@model Tuple<List<UniQode.Models.Shared.MottoModel>, List<UniQode.Models.Shared.EmployeeModel>>
 <div id="mottos" class="mottos">
-    <div class="container body-content">
-        @for (var i = 0; i < Model.Count(); i++)
+    @for (var i = 0; i < Model.Item1.Count(); i++)
+    {
+        if (i % 2 == 0)
         {
-            if (i % 2 == 0)
-            {
-                <div class="row motto">
+            <div class="row motto" style="z-index: @(i+10)">
+                <div class="container body-content">
                     <div class="col-md-7">
                         <h2>
-                            "@Model.ElementAt(i).Title"
+                            "@Model.Item1.ElementAt(i).Title"
                         </h2>
                         <p>
-                            @Model.ElementAt(i).Description
+                            @Model.Item1.ElementAt(i).Description
                         </p>
                     </div>
-                    <div class="col-md-5">
-                        <!--todo: insert image of employee etc-->
+                    <div class="col-md-5 employee-area">
+                        <img alt="@Model.Item2.ElementAt(i).FirstName @Model.Item2.ElementAt(i).LastName" src="@Model.Item2.ElementAt(i).ProfilePicture.OriginalUrl" />
+                        <div class="employee-info right">
+                            @Model.Item2.ElementAt(i).FirstName @Model.Item2.ElementAt(i).LastName
+                            <span class="employee-title">@Model.Item2.ElementAt(i).Title</span>
+                        </div>
                     </div>
                 </div>
-            }
-            else
-            {
-                <div class="row motto">
-                    <div class="col-md-5">
-                        <!--todo: insert image of employee etc-->
-                    </div>
-                    <div class="col-md-7">
-                        <h2>
-                            "@Model.ElementAt(i).Title"
-                        </h2>
-                        <p>
-                            @Model.ElementAt(i).Description
-                        </p>
-                    </div>
-                </div>
-            }
+            </div>
         }
-    </div>
+        else
+        {
+            <div class="row motto" style="z-index: @(i+10)">
+                <div class="container body-content">
+                    <div class="col-md-5 employee-area">
+                        <img alt="@Model.Item2.ElementAt(i).FirstName @Model.Item2.ElementAt(i).LastName" src="@Model.Item2.ElementAt(i).ProfilePicture.OriginalUrl" />
+                        <div class="employee-info left">
+                            @Model.Item2.ElementAt(i).FirstName @Model.Item2.ElementAt(i).LastName
+                            <span class="employee-title">@Model.Item2.ElementAt(i).Title</span>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <h2>
+                            "@Model.Item1.ElementAt(i).Title"
+                        </h2>
+                        <p>
+                            @Model.Item1.ElementAt(i).Description
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    }
 </div>
