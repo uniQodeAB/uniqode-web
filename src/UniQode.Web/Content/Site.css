@@ -175,14 +175,14 @@ h2 {
     .employee-area .employee-info.right {
         position: absolute;
         top: 20%;
-        right: 0%;
+        right: -10%;
         float: right;
         text-align: right;
     }
     .employee-area .employee-info.left {
         position: absolute;
         top: 20%;
-        left: 0%;
+        left: -10%;
         float: left;
     }
     .employee-area .employee-title {
