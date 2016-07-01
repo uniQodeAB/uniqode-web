@@ -258,8 +258,7 @@ h2 {
     position: relative;
 }
 .employees-body {
-    background-color: rgb(77,82,92);
-    background-color: rgba(77,82,92,0.6);
+    background-color: rgb(52,55,62);
 }
     .employees .fading-overlay {
         height: 102px;
