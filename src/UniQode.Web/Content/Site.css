@@ -373,6 +373,16 @@ h2 {
     .contact .body-content {
         padding: 50px 0;
     }
+    
+.social a {
+    margin-right: 15px;
+    font-size: 1.8em;
+    color: inherit; 
+}
+.social a:hover {
+    text-decoration: none;
+    color: rgb(142, 198, 134);
+}
 
 
 #news .body-content {
