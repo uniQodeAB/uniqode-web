@@ -1,14 +1,16 @@
 ﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using UniQode.Common.Extensions;
 using UniQode.Entities.Data;
+using UniQode.Entities.Enums;
 
 namespace UniQode.Models.Shared
 {
     public class NewsArticleModel
     {
         [System.Web.Mvc.HiddenInput(DisplayValue = false)]
-        [Required]
+        //[Required]
         public long Id { get; set; }
 
         private string _title;
@@ -38,6 +40,12 @@ namespace UniQode.Models.Shared
 
         [Required]
         public DateTime Created { get; set; }
+        
+        [System.Web.Mvc.HiddenInput(DisplayValue = false)]
+        public State State { get; set; }
+
+        [Bindable(false)]
+        public AdminAction Action { get; set; }
 
         public static NewsArticleModel FromDto(NewsArticle dto)
         {

@@ -308,6 +308,8 @@
     <Content Include="Views\Shared\Partials\_Employees.cshtml" />
     <Content Include="Views\Shared\Partials\_Spotlight.cshtml" />
     <Content Include="Views\Shared\Partials\_Contact.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\NewsArticleModel.cshtml" />
+    <Content Include="Views\News\AddEdit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

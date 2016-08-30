@@ -9,7 +9,7 @@ namespace UniQode.Common.Extensions
             if (string.IsNullOrWhiteSpace(input))
                 return input;
 
-            var whitelisted = "abcdefghijklmnopqrstuvwxyz-_";
+            var whitelisted = "abcdefghijklmnopqrstuvwxyz-_0123456789";
             var builder = new StringBuilder();
 
             input = input.ToLower();

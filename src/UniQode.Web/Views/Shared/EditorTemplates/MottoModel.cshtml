@@ -29,7 +29,7 @@
             <div class="form-horizontal">
                 <div class="form-group">
                     @Html.HiddenFor(m => m.Id, new { Name = "Id" })
-                    @Html.HiddenFor(m => m.State, new {Name = "State" })
+                    @Html.HiddenFor(m => m.State, new { Name = "State" })
                     <div class="col-md-12" style="margin-bottom: 10px;">
                         @Html.LabelFor(m => m.Title)<br/>
                         @Html.TextBoxFor(m => m.Title, new {Name = "Title", @class = "form-control"})

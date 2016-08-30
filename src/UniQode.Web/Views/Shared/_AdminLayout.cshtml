@@ -36,13 +36,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("uniQode admin", "Index", "Admin", new { area = "" }, new { @class = "navbar-brand" })
+                <span class="navbar-brand">Admin:</span>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>
-                        @Html.ActionLink("Employees", "Employees", "Admin")
+                        @Html.ActionLink("Start", "Index", "Admin")
                     </li>
+                    @*<li>
+                        @Html.ActionLink("Employees", "Employees", "Admin")
+                    </li>*@
                     <li>
                         @Html.ActionLink("News", "News", "Admin")
                     </li>

@@ -1,0 +1,10 @@
+﻿@model UniQode.Models.Shared.NewsArticleModel
+
+@{
+    ViewBag.Title = "News - Add/Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br/>
+<div id="news">
+    @Html.EditorFor(m => Model)
+</div>
