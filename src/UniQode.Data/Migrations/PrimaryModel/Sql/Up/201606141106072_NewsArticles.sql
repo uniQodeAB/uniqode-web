@@ -43,6 +43,6 @@ INSERT INTO [primary].[NewsArticles](Id, Title, SearchableTitle, Body, Created, 
 VALUES (93, 'SENIOR .NET CONSULTANT ANDREAS HALL JOINS UNIQODE!', 'senior-net-consultant-andreas-hall-joins-uniqode', 'It is with pride and happines we welcome Andreas Hall to uniQode! With Andreas onboard uniQode gets even stronger within Episerver and .Net as this is Andreas experts areas. Andreas begins his journey with uniQode at Svenska Kraftnät. Big big welcome to uniQode Andreas!', '2016-04-12', '2016-04-12', 'NEW HIRE')
 
 INSERT INTO [primary].[NewsArticles](Id, Title, SearchableTitle, Body, Created, Modified, Category)
-VALUES (96, 'WELCOME TO UNIQODE EMMA CARLSTRÖM!', 'welcome-to-uniqode-emma-carlstrm', 'uniQode are proud to present that highly recommended consultant Emma Carlström chose uniQode for her next career step. This makes us proud and happy! Emmas first assignment at uniQode are at NCG. Welcome Emma!', '2016-09-30', '2016-09-30', 'NEW HIRE')
+VALUES (96, 'WELCOME TO UNIQODE EMMA CARLSTRÖM!', 'welcome-to-uniqode-emma-carlstrm', 'uniQode are proud to present that highly recommended consultant Emma Carlström chose uniQode for her next career step. This makes us proud and happy! Emmas first assignment at uniQode are at NCG. Welcome Emma!', '2016-08-30', '2016-08-30', 'NEW HIRE')
 
 SET IDENTITY_INSERT [primary].[NewsArticles] OFF;
