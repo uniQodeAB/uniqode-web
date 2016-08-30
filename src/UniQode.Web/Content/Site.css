@@ -391,6 +391,10 @@ h2 {
 #news .news-article {
     margin-bottom: 10px;
 }
+#news .trailing-arrow.green-opac {
+    border-top-color: rgb(142, 198, 134);
+    border-top-color: rgba(142, 198, 134, 0.6);
+}
 
 .social-content {
     line-height: 12px;
