@@ -11,7 +11,7 @@ namespace UniQode.Data.Repositories
     public abstract class Repository<TEntity> : IRepository<TEntity> 
         where TEntity : class, new()
     {
-        public Repository(DbContext dbContext)
+        protected Repository(DbContext dbContext)
         {
             DbContext = dbContext;
             DbSet = DbContext.Set<TEntity>();

@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AzureDbConfiguration.cs" />
     <Compile Include="Migrations\PrimaryModel\201604022219491_LongerDescriptions.cs" />
     <Compile Include="Migrations\PrimaryModel\201604022219491_LongerDescriptions.Designer.cs">
       <DependentUpon>201604022219491_LongerDescriptions.cs</DependentUpon>

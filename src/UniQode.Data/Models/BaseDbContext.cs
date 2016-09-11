@@ -3,6 +3,7 @@ using System.Data.Entity;
 
 namespace UniQode.Data.Models
 {
+    [DbConfigurationType(typeof(AzureDbConfiguration))]
     public abstract class BaseDbContext : DbContext
     {
         protected BaseDbContext(string nameOrConnectionString)
