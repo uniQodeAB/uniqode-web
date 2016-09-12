@@ -348,7 +348,7 @@ h2 {
             }
 
 .contact {
-    
+    position: relative;
 }
     .contact .title {
         text-align: center;
