@@ -13,8 +13,11 @@
         height: 440px;
         padding-top: 105px;
     }
-    .mottos .employee-area {
+    .motto .employee-area {
         width: 40%;
+    }
+    .motto:last-child .employee-area .image {
+        overflow: hidden;
     }
 
     .workfields .fading-overlay {
@@ -43,7 +46,14 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 992px) {
+/* special hack for images */
+@media (min-width: 992px) and (max-width: 1095px) {
+    .motto:last-child .employee-area .image {
+        overflow: inherit;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 993px) {
     .mottos .motto:first-child {
         margin-top: -365px;
         padding-top: 215px;
@@ -55,7 +65,7 @@
         padding-bottom: 55px;
     }
 
-    .spotlight .employee-area img {
+    .spotlight .employee-area .image {
         margin-top: -50px;
     }
     .spotlight .title {
