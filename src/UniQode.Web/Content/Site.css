@@ -19,7 +19,7 @@ h1, h2, h3, h4 {
 
 h2 {
     font-size: 2.2em !important;
-    margin-bottom: 0.8em;
+    margin-bottom: 0.8em !important;;
 }
 
 .navbar {
@@ -30,8 +30,8 @@ h2 {
     max-height: 40px !important;
 }
 .navbar a {
-    font-size: 1em;
-    color: #738b9a !important;
+    font-size: 0.85em;
+    color: #667e8d !important;
     font-weight: 600;
 }
     .navbar a:hover {
@@ -110,9 +110,9 @@ h2 {
 
 .note {
     padding: 20px;
-    max-width: 480px;
+    max-width: 370px;
     margin: 0 auto;
-    font-size: 1.5em;
+    font-size: 1em;
     text-align: center;
     position: relative;
     z-index: 1000;
@@ -136,7 +136,7 @@ h2 {
 }
     .top-area .logo {
         display: block;
-        max-width: 50%;
+        max-width: 45%;
         margin: 20px auto 80px auto;
     }
 
@@ -181,22 +181,21 @@ h2 {
         color: rgb(69, 96, 95);
         max-width: 50%;
         font-weight: bold;
-        font-size: 1.3em;
+        font-size: 1.1em;
         line-height: 1.2em;
+        text-transform: uppercase;
+        top: 16%;
+        right: -16%;
     }
     .employee-area .employee-info.right {
-        position: absolute;
-        top: 20%;
-        right: -10%;
+        position: absolute;        
         float: right;
-        text-align: right;
-        text-transform: uppercase;
+        text-align: left;        
     }
     .employee-area .employee-info.left {
         position: absolute;
-        top: 20%;
-        left: -10%;
         float: left;
+        text-align: right;    
     }
     .employee-area .employee-title {
         color: rgb(69, 96, 95);
@@ -205,6 +204,9 @@ h2 {
         font-size: 0.7em;
         text-align: left;
         margin-top: -0.2em;
+    }
+    .employee-info.left .employee-title {
+        text-align: right;
     }
 
 .workfields {
@@ -223,13 +225,13 @@ h2 {
     background: rgb(142, 198, 134);
     background: rgba(142, 198, 134, 0.6);
     text-align: center;
-    padding: 20px;
+    padding: 21px;
     position: relative;
 }
 .workfields .workfields-body, .news .news-body {
     background: rgb(228, 238, 228);
     margin-top: -20px;
-    padding-top: 20px;
+    padding-top: 37px;
     padding-bottom: 50px;
 }
     .workfields .title h2, .news .title h2 {
