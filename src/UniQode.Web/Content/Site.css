@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Source Sans Pro', sans-serif !important;
-    font-size: 16px !important;
+    font-size: 18px !important;
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -18,7 +18,8 @@ h1, h2, h3, h4 {
 }
 
 h2 {
-    font-size: 2.8em !important;
+    font-size: 2.2em !important;
+    margin-bottom: 0.8em;
 }
 
 .navbar {
@@ -29,8 +30,9 @@ h2 {
     max-height: 40px !important;
 }
 .navbar a {
-    font-size: 1.1em;
-    color: #efefef !important;
+    font-size: 1em;
+    color: #738b9a !important;
+    font-weight: 600;
 }
     .navbar a:hover {
         color: #666 !important;
@@ -114,6 +116,9 @@ h2 {
     text-align: center;
     position: relative;
     z-index: 1000;
+    -webkit-box-shadow: 0px 20px 86px -13px rgba(0,0,0,0.89);
+    -moz-box-shadow: 0px 20px 86px -13px rgba(0,0,0,0.89);
+    box-shadow: 0px 20px 86px -13px rgba(0,0,0,0.89);
 }
     .note.green {
         background: rgb(142, 198, 134);
@@ -138,7 +143,7 @@ h2 {
 .mottos {
     /*background: rgb(222, 230, 233);*/
     color: rgb(69, 96, 95);
-    line-height: 2em;
+    line-height: 1.6em;
 
 }
     .mottos .motto {
@@ -185,6 +190,7 @@ h2 {
         right: -10%;
         float: right;
         text-align: right;
+        text-transform: uppercase;
     }
     .employee-area .employee-info.left {
         position: absolute;
@@ -195,7 +201,10 @@ h2 {
     .employee-area .employee-title {
         color: rgb(69, 96, 95);
         font-weight: normal;
-        font-size: 0.8em;
+        font-size: 0.8em;        
+        font-size: 0.7em;
+        text-align: left;
+        margin-top: -0.2em;
     }
 
 .workfields {
