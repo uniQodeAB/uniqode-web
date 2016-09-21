@@ -1,4 +1,4 @@
-﻿html,body
+html,body
 {
     width: 100%;
     margin: 0;
@@ -169,31 +169,52 @@ h2 {
             margin-top: 0;
         }
 
-    .mottos .employee-area {
-        
-    }
     .employee-area img {
-        max-width: 100%;
-        margin-bottom: -100px;
-        margin-top: -70px;
+        max-width: 55%;
+        margin-bottom: -115px;
+        margin-top: -40px;
+        margin-left: 10%;        
+    }
+    @media (min-width: @screen-md-min) { 
+        .employee-area img {
+            max-width: 55%;
+            margin-bottom: -115px;
+            margin-top: -50px;
+            margin-left: 10%;
+        }
+    }
+    @media (min-width: @screen-lg-min) { 
+        .employee-area img {
+            max-width: 100%;
+            margin-bottom: -100px;
+            margin-top: -70px;
+        }
     }
     .employee-area .employee-info {
         color: rgb(69, 96, 95);
-        width: 49%;
+        width: 70%;
         font-weight: bold;
         font-size: 1.1em;
         line-height: 1.2em;
         text-transform: uppercase;
         top: 16%;
         right: -16%;
-        position: absolute;   
-         float: right;
-        text-align: left;  
+    }
+    @media (min-width: @screen-md-min) { 
+        .employee-area .employee-info {
+            width: 48%;
+        }
+    }
+    .employee-area .employee-info.right {
+        position: absolute;        
+        float: right;
+        text-align: left;        
     }
     .employee-area .employee-info.left {
+        position: absolute;
         float: left;
-        text-align: right;  
-        left: -16%;
+        text-align: right;   
+        left: -16%; 
     }
     .employee-area .employee-title {
         color: rgb(69, 96, 95);
