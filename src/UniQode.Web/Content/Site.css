@@ -129,15 +129,22 @@ h2 {
     background: url('/content/img/bg_top.jpg');
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-size: 100% auto;
+    background-size: cover;
     padding-top: 5%;
     padding-bottom: 200px;
     margin-top: -50px;
 }
+    
     .top-area .logo {
         display: block;
-        max-width: 45%;
-        margin: 20px auto 80px auto;
+        margin: 60px auto 40px auto;
+        max-width: 60%;
+    }
+    @media (min-width: 992px) {
+        top-area .logo {
+            margin: 20px auto 80px auto;
+            max-width: 45%;
+        }
     }
 
 .mottos {
@@ -148,14 +155,14 @@ h2 {
 }
     .mottos .motto {
         position: relative;
-        margin-top: -55px;
+        margin-top: -60px;
         padding-top: 80px;
 
         background: -moz-linear-gradient(top, rgba(177,185,187,0.3) 0%, rgba(222,230,233,0.81) 11%, rgba(222,230,233,1) 15%);
         background: -webkit-linear-gradient(top, rgba(177,185,187,0.3) 0%,rgba(222,230,233,0.81) 11%,rgba(222,230,233,1) 15%);
         background: linear-gradient(to bottom, rgba(177,185,187,0.3) 0%,rgba(222,230,233,0.81) 11%,rgba(222,230,233,1) 15%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4db1b9bb', endColorstr='#dee6e9',GradientType=0 );
-    }
+    }    
     .mottos .motto:first-child {
         margin-top: -240px;
         padding-top: 180px;
@@ -165,6 +172,9 @@ h2 {
         background: linear-gradient(to bottom, rgba(222,230,233,0) 0%,rgba(222,230,233,0.2) 5%,rgba(222,230,233,1) 25%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00dee6e9', endColorstr='#dee6e9',GradientType=0);
     }
+    .mottos .motto:last-child(2) {
+        margin-top: 0px;
+    }
         .mottos .motto h2 {
             margin-top: 0;
         }
@@ -173,7 +183,7 @@ h2 {
         max-width: 55%;
         margin-bottom: -115px;
         margin-top: -40px;
-        margin-left: 10%;        
+        margin-left: 8%;        
     }
     @media (min-width: 992px) {
         .employee-area img {
@@ -185,7 +195,7 @@ h2 {
     }
     .employee-area .employee-info {
         color: rgb(69, 96, 95);
-        width: 64%;
+        width: 67%;
         font-weight: bold;
         font-size: 1.1em;
         line-height: 1.2em;
@@ -194,6 +204,12 @@ h2 {
         right: -16%;
     }
     @media (min-width: 992px) { 
+        .employee-area .employee-info {
+            width: 43%;
+            top: 13%;
+        }
+    }
+    @media (min-width: 1200px) { 
         .employee-area .employee-info {
             width: 48%;
         }
