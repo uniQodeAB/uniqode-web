@@ -177,14 +177,6 @@ h2 {
     }
     @media (min-width: @screen-md-min) { 
         .employee-area img {
-            max-width: 55%;
-            margin-bottom: -115px;
-            margin-top: -50px;
-            margin-left: 10%;
-        }
-    }
-    @media (min-width: @screen-lg-min) { 
-        .employee-area img {
             max-width: 100%;
             margin-bottom: -100px;
             margin-top: -70px;
@@ -193,7 +185,7 @@ h2 {
     }
     .employee-area .employee-info {
         color: rgb(69, 96, 95);
-        width: 48%;
+        width: 64%;
         font-weight: bold;
         font-size: 1.1em;
         line-height: 1.2em;
@@ -203,7 +195,7 @@ h2 {
     }
     @media (min-width: @screen-md-min) { 
         .employee-area .employee-info {
-            width: 70%;
+            width: 48%;
         }
     }
     .employee-area .employee-info.right {
