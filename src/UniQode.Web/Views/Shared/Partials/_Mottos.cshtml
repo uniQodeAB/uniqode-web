@@ -1,4 +1,4 @@
-﻿@model Tuple<List<UniQode.Models.Shared.MottoModel>, List<UniQode.Models.Shared.EmployeeModel>>
+@model Tuple<List<UniQode.Models.Shared.MottoModel>, List<UniQode.Models.Shared.EmployeeModel>>
 <div id="mottos" class="mottos">
     @for (var i = 0; i < Model.Item1.Count(); i++)
     {
@@ -30,7 +30,7 @@
         {
             <div class="row motto" style="z-index: @(i+10)">
                 <div class="container body-content">
-                    <div class="col-md-5 employee-area">
+                    <div class="col-md-5 employee-area hidden-sm hidden-xs">
                         <div class="image">
                             <img alt="@Model.Item2.ElementAt(i).FirstName @Model.Item2.ElementAt(i).LastName" src="@Model.Item2.ElementAt(i).ProfilePicture.OriginalUrl" />
                         </div>
