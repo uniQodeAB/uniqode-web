@@ -179,7 +179,7 @@ h2 {
     }
     .employee-area .employee-info {
         color: rgb(69, 96, 95);
-        max-width: 50%;
+        width: 49%;
         font-weight: bold;
         font-size: 1.1em;
         line-height: 1.2em;
