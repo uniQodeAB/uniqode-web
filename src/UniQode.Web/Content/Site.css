@@ -175,7 +175,7 @@ h2 {
         margin-top: -40px;
         margin-left: 10%;        
     }
-    @media (min-width: @screen-md-min) { 
+    @media (min-width: 992px) {
         .employee-area img {
             max-width: 100%;
             margin-bottom: -100px;
@@ -193,7 +193,7 @@ h2 {
         top: 16%;
         right: -16%;
     }
-    @media (min-width: @screen-md-min) { 
+    @media (min-width: 992px) { 
         .employee-area .employee-info {
             width: 48%;
         }
