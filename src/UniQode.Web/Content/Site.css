@@ -186,16 +186,14 @@ h2 {
         text-transform: uppercase;
         top: 16%;
         right: -16%;
-    }
-    .employee-area .employee-info.right {
-        position: absolute;        
-        float: right;
-        text-align: left;        
+        position: absolute;   
+         float: right;
+        text-align: left;  
     }
     .employee-area .employee-info.left {
-        position: absolute;
         float: left;
-        text-align: right;    
+        text-align: right;  
+        left: -16%;
     }
     .employee-area .employee-title {
         color: rgb(69, 96, 95);
