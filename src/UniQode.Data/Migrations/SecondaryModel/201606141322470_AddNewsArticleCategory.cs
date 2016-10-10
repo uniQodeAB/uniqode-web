@@ -9,8 +9,6 @@ namespace UniQode.Data.Migrations.SecondaryModel
         {
             AddColumn("secondary.NewsArticles", "Category", c => c.String(nullable: false, maxLength: 32));
             CreateIndex("secondary.NewsArticles", "Category");
-
-            Sql("UPDATE [secondary].[NewsArticles] SET Category = 'NEW HIRE'"); // all in there at this point are new hires
         }
         
         public override void Down()

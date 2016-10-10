@@ -7,12 +7,10 @@ namespace UniQode.Data.Migrations.SecondaryModel
     {
         public override void Up()
         {
-            SqlFile(@"Migrations\SecondaryModel\Sql\Up\201606141105416_NewsArticles.sql");
         }
 
         public override void Down()
         {
-            SqlFile(@"Migrations\SecondaryModel\Sql\Down\201606141105416_NewsArticles.sql");
         }
     }
 }

@@ -70,6 +70,14 @@
     <Compile Include="Migrations\PrimaryModel\201606281338437_FixEmployeesAndExternalRefs.Designer.cs">
       <DependentUpon>201606281338437_FixEmployeesAndExternalRefs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\PrimaryModel\201610100933327_ProperNewsArticles.cs" />
+    <Compile Include="Migrations\PrimaryModel\201610100933327_ProperNewsArticles.Designer.cs">
+      <DependentUpon>201610100933327_ProperNewsArticles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\SecondaryModel\201610100935470_ProperNewsArticles.cs" />
+    <Compile Include="Migrations\SecondaryModel\201610100935470_ProperNewsArticles.Designer.cs">
+      <DependentUpon>201610100935470_ProperNewsArticles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\SharedConfiguration.cs" />
     <Compile Include="Migrations\SecondaryModel\201604022220334_LongerDescriptions.cs" />
     <Compile Include="Migrations\SecondaryModel\201604022220334_LongerDescriptions.Designer.cs">
@@ -155,6 +163,9 @@
     <EmbeddedResource Include="Migrations\PrimaryModel\201606281338437_FixEmployeesAndExternalRefs.resx">
       <DependentUpon>201606281338437_FixEmployeesAndExternalRefs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\PrimaryModel\201610100933327_ProperNewsArticles.resx">
+      <DependentUpon>201610100933327_ProperNewsArticles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\SecondaryModel\201603121226229_Initial.resx">
       <DependentUpon>201603121226229_Initial.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,22 +181,25 @@
     <EmbeddedResource Include="Migrations\SecondaryModel\201606281336392_FixEmployeesAndExternalRefs.resx">
       <DependentUpon>201606281336392_FixEmployeesAndExternalRefs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\SecondaryModel\201610100935470_ProperNewsArticles.resx">
+      <DependentUpon>201610100935470_ProperNewsArticles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\Shared\201606302130085_InsertInitialEmployeeInformation.resx">
       <DependentUpon>201606302130085_InsertInitialEmployeeInformation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Migrations\PrimaryModel\Sql\Down\201606141106072_NewsArticles.sql">
+    <Content Include="Migrations\PrimaryModel\Sql\Down\201610100933327_ProperNewsArticles.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Migrations\PrimaryModel\Sql\Up\201606141106072_NewsArticles.sql">
+    <Content Include="Migrations\PrimaryModel\Sql\Up\201610100933327_ProperNewsArticles.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Migrations\SecondaryModel\Sql\Down\201606141105416_NewsArticles.sql">
+    <Content Include="Migrations\SecondaryModel\Sql\Down\201610100935470_ProperNewsArticles.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Migrations\SecondaryModel\Sql\Up\201606141105416_NewsArticles.sql">
+    <Content Include="Migrations\SecondaryModel\Sql\Up\201610100935470_ProperNewsArticles.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Migrations\Shared\Sql\Up\insert_employees.sql">
