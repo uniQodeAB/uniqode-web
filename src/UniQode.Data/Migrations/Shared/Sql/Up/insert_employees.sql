@@ -1,4 +1,4 @@
-/**************************************************************
+ï»¿/**************************************************************
 *** Cleanup
 **************************************************************/
 
@@ -39,9 +39,9 @@ DECLARE @employeeId UNIQUEIDENTIFIER,
 
 SELECT @employeeId = NEWID()
 INSERT INTO [primary].Employees(Id, FirstName, LastName, Email, Title, ShortDescription, [Description])
-VALUES (@employeeId, 'Carl', 'Ripa', 'carl.ripa@uniqode.se', '.NET Sensei', '...', '... ...')
+VALUES (@employeeId, 'Carl', 'Ripa', 'carl.ripa@uniqode.se', '.Net Sensei', '...', '... ...')
 INSERT INTO [secondary].Employees(Id, FirstName, LastName, Email, Title, ShortDescription, [Description])
-VALUES (@employeeId, 'Carl', 'Ripa', 'carl.ripa@uniqode.se', '.NET Sensei', '...', '... ...')
+VALUES (@employeeId, 'Carl', 'Ripa', 'carl.ripa@uniqode.se', '.Net Sensei', '...', '... ...')
 
 INSERT INTO [primary].ProfilePictures(Id, OriginalUrl, SquareUrl)
 VALUES (@employeeId, 'https://uniqodewebstorage.blob.core.windows.net/profile-pictures/carl.png', 'https://uniqodewebstorage.blob.core.windows.net/profile-pictures/sq-carl.png')
@@ -81,7 +81,7 @@ VALUES (@tmpId, @employeeId, @tmpId2, @text)
 SELECT 
 	@tmpId = NEWID(), 
 	@tmpId2 = Id, 
-	@text = 'To be part of a small, but fantasic group of skilled people. Then in the meantime also be a part of the bigger QGroup with all it´s inspiring people.'
+	@text = 'To be part of a small, but fantasic group of skilled people. Then in the meantime also be a part of the bigger QGroup with all itï¿½s inspiring people.'
 FROM [primary].SpotlightQuestions 
 WHERE [Text] = 'The best with uniQode?'
 
@@ -139,9 +139,9 @@ VALUES (@tmpId, @employeeId, 3, 'https://twitter.com/lindekarl')
 
 SELECT @employeeId = NEWID()
 INSERT INTO [primary].Employees(Id, FirstName, LastName, Email, Title, ShortDescription, [Description])
-VALUES (@employeeId, 'Johan', 'Suleiko Allansson', 'johan.allansson@uniqode.se', '.NET Guru', '...', '... ...')
+VALUES (@employeeId, 'Johan', 'Suleiko Allansson', 'johan.allansson@uniqode.se', '.Net Guru', '...', '... ...')
 INSERT INTO [secondary].Employees(Id, FirstName, LastName, Email, Title, ShortDescription, [Description])
-VALUES (@employeeId, 'Johan', 'Suleiko Allansson', 'cjohan.allansson@uniqode.se', '.NET Guru', '...', '... ...')
+VALUES (@employeeId, 'Johan', 'Suleiko Allansson', 'cjohan.allansson@uniqode.se', '.Net Guru', '...', '... ...')
 
 INSERT INTO [primary].ProfilePictures(Id, OriginalUrl, SquareUrl)
 VALUES (@employeeId, 'https://uniqodewebstorage.blob.core.windows.net/profile-pictures/johan.png', 'https://uniqodewebstorage.blob.core.windows.net/profile-pictures/sq-johan.png')
@@ -174,9 +174,9 @@ VALUES (@tmpId, @employeeId, 4, 'https://github.com/allansson')
 
 SELECT @employeeId = NEWID()
 INSERT INTO [primary].Employees(Id, FirstName, LastName, Email, Title, ShortDescription, [Description])
-VALUES (@employeeId, 'Magnus', 'Rydén', 'magnus.ryden@uniqode.se', '.NET virtuoso', '...', '... ...')
+VALUES (@employeeId, 'Magnus', 'RydÃ©n', 'magnus.ryden@uniqode.se', '.Net virtuoso', '...', '... ...')
 INSERT INTO [secondary].Employees(Id, FirstName, LastName, Email, Title, ShortDescription, [Description])
-VALUES (@employeeId, 'Magnus', 'Rydén', 'magnus.ryden@uniqode.se', '.NET virtuoso', '...', '... ...')
+VALUES (@employeeId, 'Magnus', 'RydÃ©n', 'magnus.ryden@uniqode.se', '.Net virtuoso', '...', '... ...')
 
 INSERT INTO [primary].ProfilePictures(Id, OriginalUrl, SquareUrl)
 VALUES (@employeeId, 'https://uniqodewebstorage.blob.core.windows.net/profile-pictures/magnus.png', 'https://uniqodewebstorage.blob.core.windows.net/profile-pictures/sq-magnus.png')
@@ -193,7 +193,7 @@ VALUES (@tmpId, @employeeId, 2, 'https://www.linkedin.com/in/magnus-ryd%C3%A9n-3
 SELECT 
 	@tmpId = NEWID(), 
 	@tmpId2 = Id, 
-	@text = 'Challenges which makes me have to redefine previous approaches. Problemsolving on this level makes me feel alive, I´m that type of person.'
+	@text = 'Challenges which makes me have to redefine previous approaches. Problemsolving on this level makes me feel alive, Iï¿½m that type of person.'
 FROM [primary].SpotlightQuestions 
 WHERE [Text] = 'What motivates you?'
 
@@ -293,9 +293,9 @@ VALUES (@tmpId, @employeeId, @tmpId2, @text)
 
 SELECT @employeeId = NEWID()
 INSERT INTO [primary].Employees(Id, FirstName, LastName, Email, Title, ShortDescription, [Description])
-VALUES (@employeeId, 'Andreas', 'Hall', 'andreas.hall@uniqode.se', '.NET Developer', '...', '... ...')
+VALUES (@employeeId, 'Andreas', 'Hall', 'andreas.hall@uniqode.se', '.Net Developer', '...', '... ...')
 INSERT INTO [secondary].Employees(Id, FirstName, LastName, Email, Title, ShortDescription, [Description])
-VALUES (@employeeId, 'Andreas', 'Hall', 'andreas.hall@uniqode.se', '.NET Developer', '...', '... ...')
+VALUES (@employeeId, 'Andreas', 'Hall', 'andreas.hall@uniqode.se', '.Net Developer', '...', '... ...')
 
 INSERT INTO [primary].ProfilePictures(Id, OriginalUrl, SquareUrl)
 VALUES (@employeeId, 'https://uniqodewebstorage.blob.core.windows.net/profile-pictures/andreas-h.png', 'https://uniqodewebstorage.blob.core.windows.net/profile-pictures/sq-andreas-h.png')
@@ -339,9 +339,9 @@ VALUES (@tmpId, @employeeId, 2, 'https://se.linkedin.com/in/andreas-petersen-464
 
 SELECT @employeeId = NEWID()
 INSERT INTO [primary].Employees(Id, FirstName, LastName, Email, Title, ShortDescription, [Description])
-VALUES (@employeeId, 'Anna', 'Häll Rivera', 'anna.hall.rivera@uniqode.se', '.Net Diva', '...', '... ...')
+VALUES (@employeeId, 'Anna', 'HÃ¤ll Rivera', 'anna.hall.rivera@uniqode.se', '.Net Diva', '...', '... ...')
 INSERT INTO [secondary].Employees(Id, FirstName, LastName, Email, Title, ShortDescription, [Description])
-VALUES (@employeeId, 'Anna', 'Häll Rivera', 'anna.hall.rivera@uniqode.se', '.Net Diva', '...', '... ...')
+VALUES (@employeeId, 'Anna', 'HÃ¤ll Rivera', 'anna.hall.rivera@uniqode.se', '.Net Diva', '...', '... ...')
 
 INSERT INTO [primary].ProfilePictures(Id, OriginalUrl, SquareUrl)
 VALUES (@employeeId, 'https://uniqodewebstorage.blob.core.windows.net/profile-pictures/anna.png', 'https://uniqodewebstorage.blob.core.windows.net/profile-pictures/sq-anna.png')
@@ -350,9 +350,9 @@ VALUES (@employeeId, 'https://uniqodewebstorage.blob.core.windows.net/profile-pi
 
 SELECT @tmpId = NEWID()
 INSERT INTO [primary].ExternalReferences(Id, Employee_Id, [Type], [Url])
-VALUES (@tmpId, @employeeId, 2, 'https://se.linkedin.com/in/anna-häll-rivera-029a1327')
+VALUES (@tmpId, @employeeId, 2, 'https://se.linkedin.com/in/anna-hï¿½ll-rivera-029a1327')
 INSERT INTO [secondary].ExternalReferences(Id, Employee_Id, [Type], [Url])
-VALUES (@tmpId, @employeeId, 2, 'https://se.linkedin.com/in/anna-häll-rivera-029a1327')
+VALUES (@tmpId, @employeeId, 2, 'https://se.linkedin.com/in/anna-hï¿½ll-rivera-029a1327')
 
 
 

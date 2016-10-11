@@ -99,6 +99,14 @@
     <Compile Include="Migrations\Shared\201606302130085_InsertInitialEmployeeInformation.Designer.cs">
       <DependentUpon>201606302130085_InsertInitialEmployeeInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Shared\201610112028491_RemoveQuitters.cs" />
+    <Compile Include="Migrations\Shared\201610112028491_RemoveQuitters.Designer.cs">
+      <DependentUpon>201610112028491_RemoveQuitters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Shared\201610112032223_NewEmployeeInformation.cs" />
+    <Compile Include="Migrations\Shared\201610112032223_NewEmployeeInformation.Designer.cs">
+      <DependentUpon>201610112032223_NewEmployeeInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\SharedModel.cs" />
     <Compile Include="Repositories\AdminRepository.cs" />
     <Compile Include="Models\BaseDbContext.cs" />
@@ -187,6 +195,12 @@
     <EmbeddedResource Include="Migrations\Shared\201606302130085_InsertInitialEmployeeInformation.resx">
       <DependentUpon>201606302130085_InsertInitialEmployeeInformation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Shared\201610112028491_RemoveQuitters.resx">
+      <DependentUpon>201610112028491_RemoveQuitters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Shared\201610112032223_NewEmployeeInformation.resx">
+      <DependentUpon>201610112032223_NewEmployeeInformation.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -203,6 +217,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Migrations\Shared\Sql\Up\insert_employees.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\Shared\Sql\Up\insert_new_employees.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Migrations\Shared\Sql\Up\insert_spotlightquestions.sql">
