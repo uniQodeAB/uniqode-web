@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -9,6 +10,9 @@ namespace UniQode.Entities.Data
     [Table("Employees")]
     public class Employee : UniqueEntity
     {
+        [JsonProperty("Id")]
+        public Guid EmpId => base.Id;
+
         [Required, MaxLength(50)]
         public string FirstName { get; set; }
 
@@ -23,9 +27,11 @@ namespace UniQode.Entities.Data
         public string Email { get; set; }
 
         [Required, MaxLength(256)]
+        [JsonIgnore]
         public string ShortDescription { get; set; }
 
         [Required]
+        [JsonIgnore]
         public string Description { get; set; }
 
         [Required]

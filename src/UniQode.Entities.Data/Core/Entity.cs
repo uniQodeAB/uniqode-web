@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace UniQode.Entities.Data.Core
@@ -17,6 +18,7 @@ namespace UniQode.Entities.Data.Core
 
         [Key]
         [Column(Order = 0)]
+        [JsonIgnore]
         public T Id { get; set; }
     }
 }

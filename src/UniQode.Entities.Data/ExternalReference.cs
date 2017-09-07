@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using UniQode.Entities.Data.Core;
 using UniQode.Entities.Enums;
@@ -9,9 +11,11 @@ namespace UniQode.Entities.Data
     public class ExternalReference : UniqueEntity
     {
         [Required]
+        [JsonIgnore]
         public Employee Employee { get; set; }
 
         [Required, Index]
+        [JsonConverter(typeof(StringEnumConverter))]
         public ExternalReferenceType Type { get; set; }
 
         [Required, MaxLength(256)]

@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using UniQode.Entities.Data.Core;
@@ -10,6 +10,7 @@ namespace UniQode.Entities.Data
     {
         [Required]
         [ForeignKey("Id")]
+        [JsonIgnore]
         public Employee Employee { get; set; }
 
         [Required, MaxLength(256)]

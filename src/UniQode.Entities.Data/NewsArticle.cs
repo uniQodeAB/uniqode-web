@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using UniQode.Entities.Data.Core;
@@ -13,6 +14,7 @@ namespace UniQode.Entities.Data
 
         [Index(IsUnique = true)]
         [Required, MaxLength(100)]
+        [JsonIgnore]
         public string SearchableTitle { get; set; }
 
         [Required, MaxLength(32), Index]
