@@ -158,7 +158,7 @@ namespace UniQode.Web.Controllers
             }
 
             var mottoModels = mottoDtos.Select(MottoModel.FromDto).ToList();
-            var employeeModels = employeeDtos.Select(EmployeeModel.FromDto).ToList();
+            var employeeModels = employeeDtos.Select(EmployeeModel.FromDto).Where(e => !string.IsNullOrWhiteSpace(e.ProfilePicture.OriginalUrl)).ToList();
             employeeModels.Shuffle();
 
             var model = Tuple.Create(mottoModels, employeeModels);
